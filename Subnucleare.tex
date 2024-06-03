@@ -1,0 +1,1852 @@
+\documentclass[12pt]{book}
+\usepackage{subfiles}
+\input{/Users/pietroscapolo/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/LaTeX/Headers/Preamble.tex}
+
+\graphicspath{/Users/pietroscapolo/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/LaTeX/Subnucleare/images/}
+
+\title{Appunti di fisica subnucleare}
+\author{P. Scapolo}
+\date{\ }
+
+\begin{document}
+\maketitle[toc=on]
+\clearpage
+\pagestyle{bigmargin}
+
+
+\chapter{Panoramica introduttiva}
+
+\section{Unità naturali}
+
+\section{Rivelatori di particelle}
+\toc
+Per caratterizzare le particelle si può pensare di valutare le grandezze che le caratterizzano tra cui:
+\begin{equation}
+	m, \ \vec S , \ \underbrace{e,\ g_{W}, \ g_{S}}_{\text{cariche}}, 	\ L, \ S_L, \ B, \ S_H
+\end{equation}
+Non tutte le particelle sono misurabili, come l'elettrone, il motivo è perché la vita media di alcune di esse è molto breve e di conseguenza non vivono abbastanza per attraversare porzioni finite di rivelatori e di conseguenza il numero di particelle studiate sono ridotte a 5 cariche + antiparticelle e 6 particelle neutre. Le grandezze misurabili di interesse sono:
+\begin{itemize}
+	\item carica elettrica
+	\item energia o impulso
+	\item direzione
+	\item massa (Particle IDentification o PID)
+\end{itemize}
+
+\subsection{Modello teorico: funzione di Bethe Bloch}
+La funzione analitica è
+	\begin{equation}
+		\< - \dd{E}{x} \> = Lz^2 \frac{Z}{A} \frac{1}{\beta^2} \[ \frac{1}{2} \ln \frac{2 m_e c^2 \beta \gamma^2 W_{MAX}}{I^2} - \beta^2- \frac{\delta( \beta \gamma)}{2} \]
+	\end{equation}
+Ed è valida per tutti gli elementi.
+\begin{itemize}
+	\item Scala, sia ascissa che ordinata sono logaritmiche
+
+La scala delle ascisse è $\[ \dd{E}{x} \]= MeV cm^2g^{-1}$, si rappresenta così perché è l'unico modo per avere tutte le curve nello stesso grafico.
+
+In ordinata si trova il prodotto
+\begin{equation}
+	\gamma \beta = \frac{p}{m} = \frac{mv}{\sqrt{1-v^2}}
+\end{equation}
+La funzione di Bethe Bloch è indipendente dalla massa, che in base alla velocità fornisce il deposito di energia per unità di lunghezza. Per questo motivo si può dire che la curva è universale (non dipende dalla massa).
+
+\item Si distinguono 4 regioni del grafico.
+
+\begin{enumerate}
+	\item nella prima parte il grafico a un asintoto a infinito che diminuisce con l'aumentare del momento, questo perché se la particella è lenta ha molto più tempo di interagire con la materia ergo di rilasciare energia 
+	\item c'è poi una regione di risalita, questo è dovuto ad effetti relativistici in quanto a velocità tendenti a quelle della luce c'è una contrazione delle lunghezze e quindi il mezzo si fa più denso rendendo più difficile il passaggio della particella
+	\item tra queste due regioni è presente quindi un minimo detto minimo di ionizzazione (\emph{Minimun Ionizion Particle}) che si trova per $2< \beta \gamma <5$. Per esempio considerando 3 come il minimo per il muone $\mu$ con $m=105$MeV.
+		\begin{equation}
+			P_\mu^{MIN} = 3 \times 105 \sim 300 \text{ MeV}
+		\end{equation}
+		E il protone $m=938$MeV
+		\begin{equation}
+			P_p^{MIN}= 3 \times 938 \sim 3 \text{ GeV}
+		\end{equation}
+	\item l'ultima zona è detta di saturazione, nel grafico c'è un cambio di pendenza (è difficile da vedere su scala logaritmica). Sopra una certa energia $\beta \gamma$ il dielettrico si polarizza e le cariche di polarizzazione schermano in modo da ridurre la crescita del deposito di energia.
+\end{enumerate}
+
+\item La formula di Bethe Bloch esprime dal dipendenza per il valore medio di $\dd{E}{x}$ questo è dato dal fatto che la ionizzazione è un processo stocastico, ovvero che osservati un numero n di particelle sparate su un materiale si ottengono n valori di energia depositata distribuiti secondo la curva di Landau. La sua forma è come una curva gaussiana con una lunga coda a destra (che è un po' un problema perché questo implica grandi fluttuazioni). Il grafico di Bethe Bloch quindi grafica la media del deposito di energia date le condizioni al contorno, cioè è la media della curva di Landau.
+\end{itemize}
+
+\subsection{Misure nella pratica}
+Un modo per effettuare misure su particelle cariche è sfruttare la ionizzazione del materiale che attraversano, cioè la separazione tra cariche di diverso segno. Un modo per esempio è applicare un campo elettrico in modo che le particelle ionizzate soggette al campo elettrico si spostino; determinate le posizioni delle particelle ionizzate è possibile ricostruire la \underline{traiettoria} della particella iniziale. 
+
+
+Per la misura del \underline{momento} si può applicare un campo magnetico, ricostruendo la traiettoria di una particella soggetta a campo magnetico si può mettere in relazione il raggio di curvatura con il momento 
+\begin{equation}
+	r=\frac{p}{qB}
+\end{equation}
+Con opportuni accorgimenti $[B]=T$ e $[p]=GeV$ e $z=\left|\frac{q}{e}\right|$ si può riscrivere:
+
+\begin{equation}
+	r = \frac{p}{0.3zB}
+\end{equation}
+E dal momento si può ottenere la sua massa. 
+\begin{equation}
+	m= \frac{p}{\beta \gamma}
+\end{equation}
+
+Per effettuare queste misure si utilizzano spettrometri, possono essere a bersaglio fisso di tipo Rutherford. In alternativa si utilizzano dei collisori in cui le particelle si scontrano, in modo che tutta l'energia dell'acceleratore sia trasferita all'urto in accordo col teorema di Konig per cui nel sdr del centro di massa si rileva tutta l'energia. 
+
+\subsubsection{Errore di misura}
+Sussitono due errori però nelle misura della traiettoria, un effetto dato dalla curvatura e un altro problema è l'interazione tra radiazione e il rilevatore che provoca effetti di diffusione multipla che intervengono nell'incertezza del momento.
+
+\begin{itemize}
+	\item Contributo misura curvatura
+
+Il raggio di curvatura è dato anche da
+\begin{equation}
+	r= \frac{L}{\sin \theta} \approx \frac{L}{\theta} \Rightarrow p = \frac{er}{B} = \frac{eL}{B} \frac{1}{\theta}
+\end{equation}
+L'incertezza su questa grandezza dalla teoria degli errori è
+\begin{gather}
+	\sigma_p= \left| \pp{p}{\theta} \right| \sigma_\theta = \frac{eBL}{\theta^2} \sigma_\theta = \frac{p^2}{eBL} \sigma_\theta \\
+	\frac{\sigma_p}{p} \propto p
+\end{gather}
+\item Contributo interazione radiazione-materia. Questo è un effetto che è dato dalla densità del materiale. È in contrasto con l'altro contributo perché il raggio di curvatura sarà più preciso tanto quanto materiale sarà presente nel rivelatore, ma ciò comporta più urti multipli interni che peggiora la precisione.  
+\end{itemize}
+Al netto i contributi sono due e vanno sommati in quadratura
+\begin{equation}
+	\frac{\sigma_p}{p} = a \cdot p \oplus c
+\end{equation}
+
+\subsection{Tracciatori di particelle cariche}
+Ne esistono di due categorie
+\begin{align*}
+	\text{non elettronici} \longrightarrow &\begin{cases}
+ 	\text{emlusioni}\\
+ 	\text{camera a nebbia/bolle}\\
+ \end{cases}\\
+ \text{elettronici} \longrightarrow &\begin{cases}
+ 	\text{camere a fili, deriva, TPC}\\
+ 	\text{strips o pixel di silici}
+ \end{cases}
+\end{align*}
+Quelli elettronici sono detti anche dipolari. 
+
+\subsubsection{Emulsioni}
+Si comportano come le lastre fotografiche, quando si creano coppie ione-elettrone che non si ricombinano lasciano una traccia al loro passaggio. Sono economiche e sono molto precise, le risoluzioni sono dell'ordine del micron. Tuttavia sono usa e getta
+
+\subsubsection{Camera a nebbia}
+È un gas in condizione sovrasature, quindi basta poco a farlo condensare. Quando una particella carica passa si condensano dei nuclei di bolle liquide che lasciano l'impressione della traiettoria.
+
+\subsubsection{Camera a bolle}
+Sfrutta il principio opposto alla camera a nebbia, cioè dato un liquido in equilibrio metastabile con il suo stato di vapore, quindi soggetto a rapidi cicli di espansione e compressione. Quando una particella viene ionizzata, attorno allo ione si creano delle bolle e quindi si è in grado di determinarne la traiettoria tracciando la scia di bolle. L'espansione serve per aumentare la dimensione delle bolle per renderle visibili. Al contrario della camera a nebbia il mezzo qui è molto più denso quindi può essere usato anche come bersaglio. La camera a bolle quindi funge da bersaglio e da rivelatore. La compressione funge da reset. Anche questo metodo ha una risoluzione ottima $10-100 \mu m$. Il limite è che i cicli avvengono a bassa frequenza, cioè visto che bisogna effettuare compressioni ed espansioni continue non si possono visualizzare tanti urti velocemente. Un altro limite è che non è elettronico quindi l'analisi è analogica. Infine il trigger ha una frequenza molto bassa perchè è necessario aspettare ogni volta che si attiva e avviene l'espansione prima di poterla rifare bisogna resettare 
+
+\subsubsection{Rivelatori a gas}
+Questo tipo di rivelatori consiste nell'utilizzo di gas, più o meno densi, i quali segnalano il passaggio di ioni. In base al valore di tensione che c'è tra anodo e catodo all'interno del rivelatore cambia il segnale rilevato. Per valori bassi di tensione il segnale è assente, poi in una regione centrale è proporzionale al deposito di energia e infine c'è una zona di saturazione. La zona di saturazione in passato era la zona di lavoro utilizzata perché, analogamente ai due rivelatori precedenti, in questo regime quando una particella si ionizza viene emessa una scintilla e ricostruendo le posizioni delle scintille si può ricavare la traiettoria del moto. La risoluzione si aggira attorno ai $100-1000 \mu m$. Alcuni esempi sono
+\begin{itemize}
+	\item Contatore/tubo Geiger
+	
+	È costituito da un filo (anodo) circondato da una lastra cilindrica (catodo). Quando una particella si ionizza dentro al contatore l'elettrone emesso produce una scarica (rottura del dielettrico), cioè un effetto a valanga dato dalla grande densità di campo elettrico nei pressi del filo (effetto punta). È possibile finalmente rilevare una variazione di corrente del filo e quantificarla per determinare l'energia emessa. Il limite di questo rivelatore è che riesce a determinare il passaggio di uno ione ma senza dare informazioni sulla traiettoria. Per avere questo informazione è necessario usare più strumenti dello stesso tipo.
+	
+	\item Camera a fili
+	
+	In questo caso ci sono due catodi (una lastra cilindrica $\longrightarrow$ due piani) e diverse fili (anodi). Questa strutta permette di stabilire la traiettoria (il punto medio) interpolando opportunamente i segnali rivelati dai fili.
+	
+	\newpage
+	\item Camera a deriva
+	
+	È la versione migliore della camera a fili. C'è sempre il filo anodico, ci sono delle strisce di dielettrico su cui sono appoggiate i catodi. Questa configurazione serve per poter modulare il campo elettrico. In questo modo, avendo un campo con una geometria scelta opportunamente, è possibile misura non solo il segnale ma anche il ritardo in cui arriva in maniera tale da poter ricostruire la posizione della particella conoscendo la velocità con cui gli ioni derivano/driftano verso l'anodo. Il limite di questi strumenti sono costituiti da un filo molto esteso e non è noto sapere la coordinate per esempio $z$ se il filo coincide con tale asse. Uno dei trucchi è segmentare i catodi in modo che possano rivelare il passaggio, allora l'anodo fornisce una coordinata e il catodo l'altra. La risoluzione dei catodi però è molto peggiore di quella dei fili. Un'esempio è TPC (camera a proiezione temporale), il rivelatore di ALICE al CERN, che è costituito da un grande cilindro con un sistema di fili o piastre anodiche per rivelare le coordinate radiali, lo studio del tempo di deriva permette di determinare la coordinata assiale.
+\end{itemize}
+
+\subsubsection{Rivelatori al silicio}
+Sono costituiti da diodi polarizzati inversamente e completamente svuotati (inizialmente non ci sono coppie elettrone-lacune). Al passaggio di particelle ionizzati il rivelatore raccoglie il segnale della coppia create lacuna-elettrone, il vantaggio è che sono piccoli e i segnali emessi sono molto intesi con rumori piccoli (\%). La precisioni è di $10 \mu m$. Un altro limite è che funzioni in una sola direzione, il trucco però è mettere vicini rivelatori dopati di tipo n-p e n$^+$ perpendicolari alle strisce p, così da leggere entrambe le coordinate del piano, per la coordinata verticale si aumentano gli strati. La risoluzione è la migliore tra i rivelatori nominati sopra e la velocità è molto più alta proprio perché lo spazio che deve percorrere il segnale è molto ridotto. I contro sono i costi e la densità del materiale che crea effetti di diffusione multipla. Se l'impulso è alto (> 100GeV) vanno bene i silici, se sono bassi (<1 GeV) si usano le camere a gas.
+
+\subsubsection{PID}
+Una volta determinata la traiettoria è necessario distinguere la particella. In generale è sufficiente ricondursi alla massa. Prima di tutto va riconosciuto che
+\begin{align*}
+	\text{leptoni} \longrightarrow &\begin{cases}
+	e^-,\ e^+ \text{ vengono assorbiti nei calorimetri EM}\\
+	\mu \text{ è molto penetrante}
+\end{cases}\\
+\pi,\  k, \ p \longrightarrow & \begin{cases}
+	\text{tempo di volo}\\
+	\text{misura di } \beta \gamma \\
+	\text{effetto Cherenkov}
+\end{cases}
+\end{align*}
+
+
+
+
+Graficando l'energia depositata, per misurare $\beta \gamma$ nel caso di $\pi, \ k, \ p$ ci sono alcune zone in cui si riesce a distinguere in modo netto, altre in cui non si riesce e ad ogni punto dove ha senso attribuire un valore di densità di probabilità di appartenenza a una particella piuttosto che un'altra.
+
+\subsubsection{Effetto Cherenkov}
+Si verifica se una particella si muove con velocità superiore a quella della luce \emph{nel mezzo} ovvero: $v> \frac{c}{n}$, in queste situazione la particella emette una radiazione coerente che si manifesta come onda d'urto. In questo caso se la particella si propaga in direzione orizzontale viene emessa l'onda d'urto per effetto Cherenkov che è descritta da un fronte d'onda piano (coerenza + principio di Huygens). Si individua un triangolo rettangolo i cui lati sono, la traiettoria della particella + raggio dell'onda piana che si propaga da un punto della traiettoria + congiungente raggio - particella. L'angolo tra la traiettoria e il raggio è legato dalla relazione:
+\begin{equation}
+	\frac{c}{n} \cdot \tau  = \cos \theta \cdot \beta c \cdot \tau \Longrightarrow \beta = \frac{1}{n \cos \theta}
+\end{equation}
+I rivelatori che sfruttano questo principio lavorano o in soglia ovvero selezionano o rigettano particelle che non emettono luce (es un protone non emette luce fino a 10 GeV), oppure misurando l'angolo di Cherenkov a partire dalla ricostruzione di fotosensori e trovando quindi $\beta$. Confrontando $\beta$ con l'angolo $\theta_C$ si ottiene la natura della particella. La precisione è data dall'indice di rifrazione, per n grandi distinguo particelle lente, per n picocli distinguo particelle veloci.
+
+\newpage
+\subsection{Tracciatori di particelle neutre}
+Per particelle neutre si intendono
+\begin{equation}
+	\gamma,\ n, \ K_L, \ \nu
+\end{equation}
+
+
+Le tecniche si basano sull'uso dei cosidetti \emph{calorimetri} che rivelano la presenza di \emph{sciami elettromagnetici}, nel caso dei fotoni ed elettroni, o \emph{sciami adronici}, nel caso di neutroni $K_L$, p, $K^\pm$, $\pi^\pm$. Il muone invece non produce sciami, quindi può attraversa qualsiasi calorimetro. Fisicamente quello che accade è che le particelle neutre (anche alcune cariche) se sparate su un mezzo denso depositano tutta la loro energia cinetica producendo delle cascate di particelle dette sciami.
+
+\begin{enumerate}
+\item \textbf{Sciame elettromagnetico - calorimetri elettromagnetici}
+
+È la conseguenza della combinazione di due processi speculari:
+\begin{itemize}
+	\item Bremsstranhlunh (radiazione di frenamento) $\boxed{e}\rightarrow\gamma $
+	
+	Se una carica elettronica viene accelerata emette radiazione e quando un'elettrone interagisce con una sorgente di campo elettromagnetico subisce un'accelerazione. La radiazione emessa sarà composta da fotoni di alta energia (se l'elettrone ha alta energia), dopo l'emissione la particella carica sarà quindi più lenta.
+		
+	Graficando l'energia depositata dalle particelle rispetto all'energia propria delle particelle incidenti si trova una relazione del tipo
+	\begin{equation}
+		\dd{E}{X} = -\frac{E}{\chi_0} \Rightarrow E(X)=E_0 e^{-X/\chi_0}
+	\end{equation}
+	Dove $\chi_0$ è la distanza di radiazione ed è tale per cui l'energia depositata è $\frac{1}{e}$ dell'energia $E_0$. Il muone non può occupare il posto dell'elettrone perché la probabilità $\sigma_{bhrem} \propto 1/m^2$ e la massa del muone è circa $200$ volte quella dell'elettrone.
+	
+	\item Produzione di coppie $\boxed{\gamma}\rightarrow e$
+	
+	È un effetto puramente quantistico, analogo a quello precedente. Sostanzialmente se un fotone ad alta energia passa nelle vicinanze di un campo elettromagnetico prodotto da un nucleo, esso si può convertire in una coppia positrone - elettrone. In questo caso c'è un valore di soglia affinché il fenomeno si inneschi:
+	\begin{equation}
+		E_\gamma > 2 m_e
+	\end{equation}
+	
+	
+	Questo effetto non si verifica nel vuoto per la conservazione del quadrimpulso. Se il fotone ha quadrimpulso $\vec K$ allora per la conservazione si ha:
+\begin{gather}
+	\q ^2 = (\vec \P_{e^-} + \vec \P_{e^+}  )^2\\
+	m_\gamma = 2m_e^2 + 2 \vec p \cdot \vec p\\
+	0 = 2m_e^2 + 2 \vec p \cdot \vec p
+\end{gather}
+Se gli elettroni sono prodotti a riposo ($\vec p=0$) allora seguirebbe che la loro massa è 0 e implicherebbe che questo non può avvenire nel vuoto, è necessario per esempio un nucleo la cui variazione di momento (rinculo) garantisce la conservazione del quadrimpulso.
+
+	
+	Si può quantificare questo fenomeno con il tasso di disintegrazione:
+	\begin{equation}
+		\frac{d \N}{\N} = - \frac{7}{9} \frac{d X}{\chi_0} \Rightarrow \N (X) = \N_0 \ e^{- \frac{7}{9} \frac{X}{\chi_0}}
+	\end{equation}
+\end{itemize}
+
+ 
+È importante notare che $\chi_0$ è il parametro che regola l'evoluzione dello sciame elettromagnetico. In generale lo sciame elettromagnetico è un effetto che nasce dalla radizione tra particella carica e materia che si propaga in maniera esponenziale, secondo le relazione sopracitate, e va avanti fino a che l'energia non si abbassa di un valore di soglia tale per cui non si verificano più eventi ($\sim 10$ MeV). 
+
+\subsubsection{Approssimazione di B di Rossi}
+Il processo per cui si manifesta uno sciame elettromagnetico (bremsstranhlunh + produzione di coppie) è stocastico, quindi con delle simulazioni si riesce a predire il comportamento medio di questo fenomeno. In alternativa si può adoperare l'approssimazione di B di Rossi ovvero trattando il problema come se fosse deterministico. Si ipotizza che lo sviluppo sia longitudinale e con cadenza regolare alternata. La legge che regola l'evoluzione è dunque:
+\begin{equation}
+	E_n = \frac{E_0}{2^n} < E_{\text{soglia}}
+\end{equation}
+In pratica a ogni distanza caratteristica si verifica uno dei due processi fino al valore di arresto $\sim 10$MeV. $2^n$ è il numero di particelle presenti in ogni sezione. 
+
+È possibile allora anche dare una stima della lunghezza di traccia, cioè la somma dei percorsi di ciascuna particella carica dello sciame
+\begin{equation}
+	\L=\sum_j l_j \propto E_0
+\end{equation}
+La lunghezza di assorbimento invece è la lunghezza dello sciame ed è proporzionale al logaritmo dell'energia.
+\begin{equation}
+	X=n \chi_0 = \log_2 \left( \frac{E_0}{E_s} \right) \chi_0
+\end{equation}
+Che sarà indicativamente la lunghezza minima del calorimetro affinché contenga tutto lo sciame.
+
+\subsubsection{Calorimetri elettromagnetici}
+Essi sono rivelatori distruttivi cioè disegnati per assorbire tutta l'energia della particella incidente e rilasciare un segnale proporzionale all'energia della particella. In pratica gli elettroni dello sciame rilasciano nel mezzo luce o ultravioletti che sono raccolti dai fotomoltiplicatori posti al termine del rivelatore che per effetto fotoelettrico converte la luce in segnale elettrico, esso sarà proporzionale al numero di fotoni.
+
+
+I mezzi utilizzati per questa strumentazioni sono o mezzi trasparenti tipo cristallo o vetro, o liquidi densi tipo Argon e Xenon, o gas (tipo camera a scintillazione). La risoluzione di un calorimetro è data dalla relazione:
+\begin{equation}
+	\frac{\sigma(E)}{E} = \frac{S}{\sqrt E} \oplus \frac{N}{E} \oplus C
+\end{equation}
+Il primo termine è quello stocastico
+\begin{equation}
+	\frac{\sigma (E)}{E} = \frac{\sigma (N)}{N} = \frac{1}{\sqrt{N}} \propto \frac{1}{\sqrt E}
+\end{equation}
+Questo indica che i calometri funzionano al contrario dei tracciatori, ovvero al crescere dell'energia/momento sono più precisi (a patto che il calorimetri sia sufficientemente grande da rilevare lo sciame).
+
+Il secondo termine è dato dal rumore elettronico ed è una costante $N$.
+
+
+Il termine costante è dato invece da problemi di strumentazioni come calibrazione o disomogeneità dei fotosensori.
+
+Ci sono due tipi di calorimetri, segmentati o a campionamento in cui c'è alternanza tra una parte densa in cui si verificano le interazioni tra radiazione e materia e una parte trasparente in cui si visualizza lo sciame, tipicamente questi sono più soggetti a fluttuazioni perché l'energia è effettivamente minore a causa della segmentazione perciò ha una precisione $8-10 \%$. Oppure sono composti da un unico materiale che svolge entrambe le funzioni, sono i vetri a piombo o cristalli scintillanti e hanno precisioni nettamente migliori sul termine stocastico.
+
+\item \textbf{Sciami adronici - calorimetri adronici}
+
+Gli adroni possono essere di due tipi
+\begin{align*}
+	\text{carichi}\rightarrow &\begin{cases}
+ 	p\\
+ 	\pi^+\\
+ 	K^+
+ \end{cases}\\
+ \text{neutri} \rightarrow &\begin{cases}
+ 	n\\
+ 	K_L
+ \end{cases}
+\end{align*}
+Essi interagiscono molto con i nuclei, le collisioni sono per lo più anaelastiche e possono produrre molte particelle per lo più instabili le quali decadendo producono altre particelle. Tipicamente gli stati finali sono per lo più pioni, cioè gli adroni più leggeri. I pioni possono essere positivi, negativi e neutri. I primi due hanno una vita media molto lunga che gli consentirebbe di attraversare il rivelatore se non interagissero con altro materiale. I $\pi^0$ invece decadono molto prima in fotoni, quindi dentro allo sciame adronico si manifesta una componente elettromagnetica.
+
+Anche nel caso dello sciame adronico il processo di assorbimento è di natura esponenziale
+\begin{equation}
+	N(x)=N_0 e^{-x/\lambda}
+\end{equation}
+Dove $\lambda$ è la lunghezza di interazione che è tipicamente molto più grande di quella di radiazione. Questo implica che i rivelatori devono essere più grandi perché lo sciame si propaga per lunghezze più grandi di uno sciame elettromagnetico. La risoluzione. notevolmente peggiore può essere anche $50-100 \% / \sqrt{E}$. Questo è dovuto dalla presenza di molteplici effetti stocastici, mentre per lo sciame elettromagnetico era presente solo due alternative di come si poteva evolvere lo sciame, qua ce ne sono molte di più, queste componenti generano molte fluttuazioni.
+
+\item \textbf{Identificazioni di neutrini}
+
+Per identificare i neutrini si cercano i risultati (leptoni carichi) di interazioni deboli con nuclei o protoni. In particolare il neutrino può interagire (debolmente) nei seguenti modi
+\begin{align*}
+	\nu_e + n &\rightarrow p + \boxed{e^-} \ \ \ \ \ \bar \nu_e + p \rightarrow n + \boxed{e^+}\\
+	\nu_\mu + n &\rightarrow p + \boxed{\mu^-}  \ \ \ \ \bar \nu_\mu + p \rightarrow n + \boxed{\mu ^+}
+\end{align*}
+La difficolta è che la sezione d'urto in questi processi è estremamente piccola e quindi è necessario avere tanto materiale su cui far scontrare il leptone. Il materiale utilizzato di solito è l'acqua. Un esempio è il superkamiokande. Questo esperimento ricostruisce il cono Cherenkov dell'elettrone del decadimento del neutrino in modo da determinare  la traiettoria del neutrino. Dalla traiettoria si riesce a capire se è allineata alla congiungete terra-sole e quindi si possono contare il numero di neutrini solari.
+
+Un altro modo di costruire un rivelatore di neutrini è la costruzioni di diversi moduli (NuTev) 
+
+\end{enumerate}
+ 
+
+
+
+
+ 
+ \newpage
+ \section{Panoramica delle particelle}
+ \toc
+ Dalla scoperta dell'elettrone sono state scoperte molte particelle pertanto è importante definire un criterio di ordinamento. Si distinguono principalmente le particelle di materia e mediatori. Un'altra divisione possibile divisione è tra particelle elementari e aggregati di particelle elementari, le prime sono fermioni puntiformi con spin $1/2$.
+ 
+ \subsection{Quark}
+ Interagiscono sia per forza debole, sia per forza EM sia per forza forte. Si dividono in famiglie:
+ \begin{equation}
+ 	\underbrace{\vettore{u \\ d}}_{\sim 1 MeV} \ \overbrace{\underbrace{\vettore{c \\ s}}_{100MeV}}^{1.5 GeV} \ \overbrace{\underbrace{\vettore{t \\ b}}_{4.5 GeV}}^{175GeV} \ \rightarrow \vettore{+2/3\ e \\ -1/3 \ e}
+ \end{equation}
+ Rispettivamente \emph{upper, down, charme, strange, top, beauty}.
+ 
+\subsection{Leptoni}
+Sono particelle puntiformi la prova più evidente della loro natura è il loro rapporto giromagnetico
+
+\begin{equation}
+	\boxed{\begin{matrix}
+		& m (MeV) & spin & g & \tau (s) & modi\\
+		\ \\
+		e & 0.511 & 1/2 & 2+o(\alpha / \pi ) & \infty & -\\
+		\mu & 105 & 1/2 & 2+ o	(\alpha/ \pi) & 2.2 \cdot 10^{-6} & \mu \rightarrow e \overline \nu_e \nu_\mu \\
+		\tau & 1777 & 1/2 & 2+ o(\alpha/\pi) & 291 \cdot 10^{-15} & \begin{cases}
+ 	\tau \rightarrow \overline \nu_e \nu_\tau \\
+ 	\tau \rightarrow \mu \overline \nu_\mu \nu_\tau \\
+ 	\tau \rightarrow had \nu_\tau
+ \end{cases}
+	\end{matrix}}
+\end{equation}
+
+Si dividono anch'essi in famiglie, ogni leptone è associato al suo neutrino:
+
+\begin{equation}
+	\vettore{\nu_e \\ e} \ \vettore{\nu_\mu \\ \mu } \ \vettore{ \nu_\tau \\ \tau} \rightarrow \vettore{0 \ e \\ -1 \ e}
+\end{equation}
+Inoltre i neutri non avendo carica interagisco solo con interazioni deboli, invece i leptoni con interazioni deboli ed elettromagnetiche.
+
+\subsection{Elettrone}
+Il miglior limite inferiore della vita media dell'elettrone è stato ottenuto con l'esperimento Borexino, sul Gran Sasso, ed è:
+\begin{equation}
+	\tau (e) > 6.6 \cdot 10^{28} \ \text{anni}
+\end{equation}
+
+A supporto del fatto che il decadimento dell'elettrone non avviene è conservazione della carica elettrica. 
+
+\subsection{Muone}
+Nell'atmosfera quando un protone entra in seguito agli urti produce uno sciame adronico, principalemnte pioni. La vita media dei pioni è $10^{-8}s$ e $c \gamma \tau \simeq 300$m. Il pione decade come
+\begin{equation}
+	\pi^\pm \rightarrow \mu^\pm \overline \nu _\mu
+\end{equation}
+Avendo il muone una vita media $\tau_\mu =2.4 \mu s$ a terra riesce ad arrivare.
+
+
+Furono scoperti per la prima volta da un gruppo di tre ricercatori: Pancini, Piccioni e Conversi nel 1942.  L'esperimento consiste in due piastre magnetizzate che hanno il ruolo di focalizzatore, alternando la polarità di queste piastre è possibile focalizzare nella zona di misura particelle del segno voluto. 
+
+Dopodichè la rivelazione avviene in una zona composta da 4 insiemi di rivelatori geiger che registrano il passaggio di particella cariche al loro interno che segnalano l'ingresso della particella e devono attivarsi contemporaneamente affinché l'esperimento inizi, dopo ciò il muone entra nell'assorbitore che è un oggetto che lo rallenta a tale punto che il muone si ferma proprio nell'assorbitore e decade a riposo, noto il tempo di decadimento si verifica il ritardo di emissione dell'elettrone (cioè il decadimento del muone). Infine sono presenti dei rivelatori di veto che servono ad eliminare eventi spuri che non sono riferiti al decdimento del muone.
+
+In pratica si misura il tempo di ingresso, quello di decadimento e si fa la differenza $\Delta t$ e viene fittata la funzione $e^{-\Delta /t}$ per ottenere la vita media.
+
+\subsection{Tau $\mathbf{\tau}$}
+L'incapacità di spiegare l'esistenza del muone ha portato alla scoperta della particella tau. Cioè una particella che sta al muone come l'elettrone sta al muone. Noto che il muone decade come
+\begin{equation}
+	\mu \rightarrow e \nu_\mu \nu_e
+\end{equation}
+Si è ipotizzato, data la massa che si è ipotizzato potesse avere il tau, il decadimento
+\begin{gather}
+	\tau \rightarrow e \nu _ \tau \nu_e\\
+	\tau \rightarrow \mu \nu_\tau \nu _\mu
+\end{gather}
+Valutando l'annichilamento dell'elttrone $e^++e^-$ i possibili risultati del processo sono 
+\begin{align*}
+	e^+e^- &\rightarrow \mu^+ \mu^- \\
+	&\rightarrow \tau^+ \tau^-
+\end{align*}
+Dove il secondo processo è stato ipotizzato da Pearl, tuttavia vista la grande massa della particella si è capito che la vita media dello stato sarebbe stata molto breve e si sarebbe visto il decadimento
+\begin{equation}
+	\tau^\pm \rightarrow  \begin{cases}e^\pm \nu_\tau \nu_e  \\ \mu^\pm \nu_\tau \nu_\mu\end{cases}   
+\end{equation}
+
+\subsubsection{Massa del tau}
+La massa di $\tau$ è possibile misurarla in due modi. Uno è un fit cinematico sui prodotti di decadimenti che è impreciso e difficile da fare. Altrimenti si può generare fare lo scan della reazione in soglia. In pratica si usa l'acceleratore come un sintonizzatore in cui si fa variare l'energia e al crescere di essa inizialmente non si rileva nulla poi si riesce a misurare la sezione d'urto del processo. In pratica graficando la sezione d'urto e $\sqrt{s}$ si trova la dipendenza 
+\begin{equation}
+	\sigma (e^+e^- \rightarrow \tau^+ \tau^- ) \propto \beta^2 = 1 - 4 m_\tau^2/s
+\end{equation}
+
+\subsection{Neutrino}
+In corrispondenza di ogni leptone carico esiste una particella neutra detta neutrino. Essi partecipano solo alle interazioni debole il che li rende difficili da rivelare anche se sono abbondanti, sempre per tale motivo molte delle loro proprietà sono ignote.
+
+Sono visibili nell'urto
+\begin{equation}
+	n \rightarrow p e^- ( \nu_e)
+\end{equation}
+Se fosse un decadimento a due corpi allora
+\begin{equation}
+	\vec P_n = \vec P_p + \vec P_e \longrightarrow \vec P^2_p = ( \vec P_n - \vec P_e )^2
+\end{equation}
+\begin{equation}
+  m_p^2 = m_n^2 + m_e^2 - 2m_n E_e \Rightarrow E_e = \frac{m_n^2 - m_p^2 + m_e^2}{2 m_n}
+\end{equation}
+Ci si aspetterebbe allora una distribuzione di energia piccata, tipo delta di dirac, in realtà nell'urto si visualizza la tipica curva di un decadimento di tre corpi, così è stato scoperto. Il neutrino è una particella molto difficile da rivelare attraverso processi $\beta$ inversi che sono processi in cui si cerca di produrre la reazione ipotizzata nell'altro verso 
+\begin{gather}
+n \rightarrow p e^- (\nu_e)\\
+e^+ n \rightarrow p \nu_e \\
+ \nu_e p \rightarrow e^+ n	
+\end{gather}
+La probabilità dell'ultima transizione coincide con la sezione d'urto. I motivi per la difficolta di rivelamento dei neutrini è legato alla sezione d'urto molto piccola $\sigma \sim 10^{-38}cm^{2}$ che in barn, noto $1 barn = 10^{-24}cm^2$.
+
+Le sorgenti naturali sono il sole $\nu_e$ dove avviene la reazione di fusione del nucleo 
+\begin{equation}
+	4 p \rightarrow .^4He^{++}2e^+ 2 \nu_e (n) \gamma + 22 MeV
+\end{equation}
+
+ i raggi cosmici prodotti principalmente come risultati secondari degli sciami adronici, le supernove e infine i relitti del big bang (di bassa energia ancora non osservate). 
+ 
+ 
+ Artificialmente si possono visualizzare nei risultati dei processi che avvengono nei reattori nucleari/bombe nucleari e negli acceleratori di particelle.
+ 
+ CO l'esperimento Savannah River Plant si usano due rivlatori che sono taniche di acqua che fa da convertitore 
+ \begin{equation}
+ 	\bar \nu_e p \rightarrow e^+ n
+ \end{equation}
+ il positrone troverà un elettrone e farà anichillazione $e^+e^- \rightarrow \gamma \gamma$ che producono scintillazione che verrà rivelata nelle due posizioni opposte, tuttavia non basta perché i fondi sono alti e influenzano i segnali. Così è stata drogata l'acqua di Cadmio che attira neutroni e poi si diseccita e rilascia anch'esso fotoni. Allora si possono prendere entrambe le coincidenze (che saranno ritardate) e rigettare la maggior parte dei fondi.
+ 
+ Dopo aver capito che il neutrino si manifesta con gli elettroni ci si è chiesti se il neutrone fosse lo stesso per tutti i leptoni o se ce ne fosse uno diverso per ognuno. L'esperimento che ha determinato questa risposta prevedeva l'utilizzo di acceleratore di particelle in cui un protone viene scontrato con un bersagli di berillio. Dall'urto vengono prodotti tra le varie cose $\pi^+$ e $\pi^-$. Noto il decadimento 
+ \begin{equation}
+ 	\pi^- \rightarrow \mu^- \bar \nu 
+ \end{equation}
+ Il neutrino emesso è sicuramente accoppiato al muone \emph{in produzione}, ma anche all'elettrone?
+ Quindi vengono prodotti pioni, estratti con campi magnetici e fatti decadere secondo quanto scritto sopra. Se il neutrino si accoppia soltanto col muone allora mi aspetto che dopo aver assorbito il muone il neutrino faccia 
+ \begin{equation}
+ 	\nu N \rightarrow \mu N'
+ \end{equation}
+ Altrimenti mi aspetto che possa succedere anche
+ \begin{equation}
+ 	\nu N \rightarrow e N'
+ \end{equation}
+ Il detector è a campionamento quindi ci si aspetta che se viene prodotto un elettrone viene prodotto uno sciame em che viene assorbito praticamente subito, invece il muone arriva oltre. Si sono visualizzati $\sim 3.5 10^{17}$ eventi che hanno evidenziato che la maggior parte erano riferito a muone. Si è concluso che il muone ha neutrino di sua esclusiva pertinenza.
+ 
+Con il tau è stato più difficile perché decade subito quindi è stato possibile verificarlo solo nel 2003.
+
+
+\subsection{Adroni}
+\subsubsection{Mesoni}
+Sono bosoni, si ottengono da una coppia di quark e antiquark.
+ Sono detti "pseudoscalari" quelli che si trovano nello stato di singoletto $\vec S=0$, "vettori" quelli che si trovano in quello di tripletto. Un esempio importante è il pione $\ket{\pi^+} = \ket{u \bar d}$. È stato prima teorizzato da Yukawa 
+
+\subsubsection{Barioni}
+Sono fermioni e sono composti da tre quark
+
+
+
+
+
+\newpage
+\section{Interazioni tra particelle e come classificarle}
+\toc
+\subsection{Introduzione}
+Ci sono quattro forze fondamentali:
+\begin{itemize}
+	\item gravitazionale
+	\item elettromagnetica
+	\item forte
+	\item debole
+\end{itemize}
+Le prime due agiscono su scala antropica mentre le altre due su scala femtoscopica. Siccome la forza di gravità è molto più piccola di quella elettromagnetica è possibile trascurarla da qui in avanti. Infatti
+\begin{equation}
+	\frac{F_G}{F_{EM}} \approx 10^{-40}
+\end{equation}
+La gerarchia delle interazioni è:
+\begin{equation}
+	F_W \ll F_{EM} \ll F_S
+\end{equation}
+Non essendo però tutte in una scala antropica queste interazioni vanno misurate in qualche modo. I criteri di classificazione sono 3:
+
+\subsubsection{Sezione d'urto}
+La misura di tale grandezza fornisce la probabilità che una reazione abbia luogo. Alcuni risultati per le tre interazioni considerate sono:
+\begin{align}
+	&\sigma (pp \rightarrow X ) \simeq 40 mb\\
+	&\sigma (e^+e^- \rightarrow X) \simeq 40 nb\\
+	&\sigma (\nu N \rightarrow X ) \simeq 0.1 pb
+\end{align}
+L'idea è che si ha un fascio (beam) di particelle incidente di numero $\N_b$ di area $\Sigma$ che incide su un bersaglio. Le particelle che colpiscono il bersaglio (target) sono $\N_t$. Il numero di urti osservati, ipotizzando una distribuzione uniforme, è dato dal rapporto dell'area dei proiettili su l'area del bersaglio 
+
+\begin{equation}
+	\frac{\N_u}{\N_t} = \frac{\N_b \sigma}{\Sigma} \Rightarrow \N_u = \N_t \N_b \frac{\sigma}{\Sigma}
+\end{equation}
+
+Considerando lo spessore del bersaglio $dx$, il numero di particelle bersaglio diventa ora $d\N_t=dV n_t$ dove $n_t$ è la densità di particelle su unità di volume $n_t= \frac{\N_t}{V} \ [m^{-3}]$, in modo più esplicito
+\begin{gather}
+	d \N_t = dV n_t = \Sigma dx n_t\\
+	\Rightarrow d \N_u = \N_b n_t \cancel{\Sigma} dx \frac{\sigma}{\cancel{\Sigma}} ; \boxed{\N_u=\frac{\N_b \N_t}{\Sigma}\sigma}\\
+	\dd{\N_u}{x} = n_t \N_b \sigma = - \dd{\N_b}{x}\\
+	\frac{1}{\N_b} \dd{\N_b}{x} = - n_t \sigma \\
+	\Rightarrow \boxed{\N_b (x) = \N_b (0) e^{-x/l}} 
+\end{gather}
+Con $l= \frac{1}{n_t \sigma}$ cammino libero medio, che è indice di quanto si svuota il fascio. Se $\N_b=1$ si ha che $\Delta \N_b=-1$ e la relazione diventa
+\begin{equation}
+	\frac{1}{\N_b} \frac{\Delta \N_b}{\Delta x} = - \frac{1}{\Delta x} =  \sigma n_t \Rightarrow \Delta x = \frac{1}{\sigma n_t}= l
+\end{equation}
+Se $\sigma = 10^{-38}cm^2$, neutrini, il cammino libero medio in un litro d'acqua ($\rho=10^3 kg/m^3$), essendo che la massa del nucleone è di $m_n=1.7 \cdot 10^{-27}kg$
+\begin{gather}
+	n_t = \frac{\rho}{m_n} = \frac{10^3}{1.7 \cdot 10^{-27}} \sim 6 \cdot 10^{-29} m^{-3}\\
+	l = \frac{1}{n_t \sigma} = \frac{1}{6 \cdot 0^{29} \cdot 10^{-42}} = \frac{1}{6} 10^{13} m = 1.7 \cdot 10^{12}m
+\end{gather}
+
+
+
+
+
+
+\subsubsection{Vita media dei processi di decadimento}
+La vita media fornisce dei risultati sulla velocità con cui una particella decade, dal corso di nucleare è noto che i tre decadimenti sono legati alle interazione fondamentali nel seguente modo:
+\begin{align}
+	&\alpha \longrightarrow \text{forza forte}\\
+	&\beta \longrightarrow \text{forza debole}\\
+	&\gamma \longrightarrow \text{forza EM}
+\end{align}
+I risultati per quanto riguarda la vita media sono:
+
+\medskip
+
+\begin{tabular}{l|c|c|c}
+	Decadimento & Probabilità & $\tau (s)$ & int\\
+  $\pi^0 \rightarrow \boxed{\gamma \gamma}$& 98\% & $10^{-16}$& EM\\
+  \hline
+  $\pi^+ \rightarrow \mu^+ \boxed{\nu}$& 99\% & $10^{-8}$ & W \\
+  \hline
+  $\rho \rightarrow \pi \pi$& 100\%& $10^{-24}$&S
+\end{tabular}
+
+\medskip
+Dove i riquadri evidenziano la natura dell'interazione, infatti la presenza di $\gamma$ automaticamente fa ricadere l'interazione nel tipo elettromagnetico, idem il neutrino $\nu$
+
+\subsubsection{Spettroscopia}
+Le misure spettroscopiche forniscono l'energia degli stati legati da cui si può ottenere il modulo della forza. Gli ordini di grandezza di energia sono 
+\begin{align}
+	&\text{EM} \longrightarrow \text{eV}\\
+	&\text{S} \longrightarrow \text{MeV-GeV}\\
+	&\text{W} \longrightarrow \text{non esistono stati legati}
+\end{align}
+Un esempio importante per l'interazione forte è il charmonio $c \bar c$ ovvero gli stati legati tra quark e anti quark, l'ordine di grandezza del salto dallo stato fondamentale al primo eccitato è $100MeV$.
+
+\newpage
+\subsection{Interazione in QED pertubativa}
+Il salto dalla fisica classica alla QED è che i mediatori di campo sono particelle. Nel caso dell'interazione EM sono fotoni, particelle dotate di \emph{impulso}, \emph{energia}. \emph{spin}. Le osservazioni sperimentali che spingono a rappresentare il campo elettrico come aggregato di fotoni sono
+\begin{itemize}
+	\item effetto fotoelettrico
+	\item effetto compton
+	\item radiazione di corpo nero
+\end{itemize}
+Le interazioni tra due particelle cariche in QED è descritta come lo scambio di fotoni. Per esempio considerando l'urto 
+\begin{equation}
+	e^- \mu^- \rightarrow e^- \mu^- 
+\end{equation}
+Per la teoria QED esiste un evento $X_1$ in cui la particella emana un fotone con il suo quadriimpulso che collide con l'elettrone, urtandolo fa cambiare la traiettoria all'elettrone. Il punto in cui esce il fotone è detto vertice di interazione e in quel punto si conserva tutto il conservabile.
+
+\subsection{Interazione elettromagnetica}
+La costante di accoppiamento è quella di struttura fine $\alpha$.
+Il quanto del campo è il fotone ed è rappresentato da una riga ondulata. Le sua caratteristiche intrinseche sono:
+\begin{align}
+	&m=0\\
+	&r= \infty\\
+	&q=0\\
+	&\tau= \infty\\
+	&S=1
+\end{align}
+Le evidenze sperimentali dello \textbf{spin intero} sono conseguenze delle regole di selezione delle transizioni atomiche, cioè la \textbf{conservazione del momento angolare}.
+
+\bigskip
+Il raggio infinito e la massa zero si deducono dalle equazioni di Maxwell.
+\begin{gather}
+	\square A_\mu = -J_\mu
+\end{gather}
+\begin{itemize}
+	\item Nel \textbf{caso statico} vale l'equazione di laplace
+\begin{equation}
+	\nabla^2 V = - \rho = - \sqrt{\alpha} \ \delta^3(0)
+\end{equation}
+\begin{equation}
+	\Rightarrow V = \frac{\sqrt{\alpha}}{r} \Rightarrow \phi(E) = \sqrt{\alpha}
+\end{equation}
+
+\item Nel \textbf{caso dinamico e nel vuoto} si ha che $\square A_\mu=0 \Rightarrow A_\mu (x) = a_\mu e^{iqx}$ dove $qx=\omega t - \vec k \cdot \vec r$
+\begin{equation}
+	-q^2 A_\mu =0 \underset{\text{Rel. di dispersione}}{\longrightarrow} \omega = k
+\end{equation}
+Se si interpreta questo risultato dal punto di vista quantistico, particellare allora $\omega \rightarrow E_\gamma$, $k \rightarrow \vec \P_\gamma$
+\begin{equation}
+	q^2 =E_\gamma^2 - \P_\gamma^2 = m_\gamma =0
+\end{equation}
+\end{itemize}
+
+Per verificare questa ipotesi (massa nulla, raggio d'azione infinito) si può farlo testando le equazioni di maxwell, trovare il miglior limite della massa che sarà dato dalla sensibilità dell'esperimento, inserirlo nelle equazioni di maxwell e mostrare che forse era meglio non inserirla (la massa). Le equazioni di maxwell se aggiunta la massa diventano le equazioni di Klein-Gordon
+\begin{equation}
+	(\nabla^2 + m^2)V = - \sqrt{\alpha} \ \delta^3(0)
+\end{equation}
+\begin{equation}
+	\Rightarrow V= \frac{\sqrt{\alpha}}{r}e^{-mr}
+\end{equation}
+Qui si può interpretare $m$ come $1/\lambda$ con $\lambda$ raggio di interazione e così abbiamo giustificato i due termini. Per verificarlo si può misurare il campo elettrico e verificare il teorema di gauss, viene fuori che $m$ è compatibile con $0$ entro la risoluzione sperimentale, nel caso statico. 
+
+Nel caso dinamico essendo $\omega^2 =k^2 +m^2$ si può verificare la dispersione del mezzo, si può fare misurando pulsar o quasar, con alcune misure si determina la distanza del fascio incidente, poi si misura lo spettro, se c'è dispersione si può verificare che arrivino in momenti diversi. Dalla stabilità delle galassie si ottengono stime più precise $m(\gamma) < 3 \cdot 10^{-63}Kg$.
+
+
+\subsection{Interazione debole}
+Esistono tre quanti per questa interazione: $W^+$, $W^-$
+ e $Z^0$. come suggeriscono i nomi le prime due sono cariche e hanno cariche opposte invece l'ultima è neutra. 
+
+
+ \begin{align}
+ 	&m(W^+) = m(W^-) \approx 80 \text{GeV}\\
+ 	&m(Z^0) = \underbrace{\frac{m(W^-)}{\cos \theta_W}}_{\theta_W = \text{Angolo di Weinberg}} =\approx 91 \text{GeV}\\
+ 	&Q(W^+)=e=-Q(W^-)\\
+ 	&Q(Z^0)=0
+ \end{align}
+ La costante di accoppiamento in questo caso è
+ \begin{equation}
+ 	\alpha_W= \frac{\alpha}{\sin^2 \theta_W} \underset{\underset{\sin^2 \theta_W = 1 - (m_W/m_z)^2 =0,2229 \pm 0,0003}{\uparrow}}{\simeq} \boxed{4,5 \alpha}
+ \end{equation}
+ \begin{equation}
+ 	\sqrt{\alpha_W} = \frac{\sqrt{\alpha}}{\sin \theta_W}
+ \end{equation}
+Anche qui lo \textbf{spin=1}. Per W ci sono esperimenti specifici, per $Z^0$ osservati urti
+\begin{equation}
+	e^+ e^- \rightarrow \mu^+ \mu^-
+\end{equation}
+Che può avvenire tramite un fotone o un $Z^0$, a una certa energia il contributo del fotone e della Z possono essere molto simili tra loro, \textbf{siccome interferiscono} (proprio c'è una figura di interferenza) \textbf{le due particelle segue che hanno lo stesso momento angolare}. 
+
+\subsubsection{Confronto costante di accoppiamento interazione debole ed elettromagnetica}
+Il valore della costante di accoppiamento è superiore rispetto a quella elettromagnetica, per chiarire che effettivamente la forza debole è inferiore rispetto a quella elettromagnetica si fa il seguente ragionamento.
+
+Un fotone che si propaga nel vuoto è descritto da un'onda piana:
+\begin{equation}
+	\partial_\rho \partial^\rho A_\mu = 0 \Rightarrow A_\mu =\epsilon_\mu e^{ikx}
+\end{equation}
+Se inserito questo risultato nell'equazione di D'Alambert risulta:
+
+\begin{equation}
+	- k_\rho k^\rho A_\mu =0 \Rightarrow m^2_\gamma =k_\rho k^\rho =0
+\end{equation}
+L'espressione del potenziale nel caso elettromagnetico è 
+\begin{align}
+	& \Delta V =0 \text{ vuoto}\\
+	& \Delta V = \rho \text{ sorgente puntiforme}\\
+	& \Rightarrow V(r) = \frac{\sqrt{\alpha}}{r} 
+\end{align}
+Nel caso dell'interazione debole dove i portatori di carica hanno massa non nulla bisogna includere la massa. in questo caso le equazioni di Maxwell si estendono a quelle di Klein-Gordon
+\begin{equation}
+	(- k_\rho k^\rho+\boxed{m^2}) W_\mu =0 \Rightarrow m^2_W =k_\rho k^\rho =m^2
+\end{equation} 
+A cascata l'espressione del potenziale diventa ora
+ \begin{align}
+	& (\Delta - \boxed{m^2})V' =0 \text{ vuoto}\\
+	& (\Delta - \boxed{m^2}) V' = -\rho \text{ sorgente puntiforme}\\
+	& \Rightarrow V'(r) = \frac{\sqrt{\alpha_W}}{r} \boxed{e^{-m_Wr}} 
+\end{align}
+Dove $V'$ è anche detto potenziale di Yukawa. La distanza propria per cui il potenziale viene smorzato è dell'ordine di $\sim \frac{1}{m_W} = (80 \text{GeV})^{-1} \approx 0.0025 \text{fm}$ quindi il potenziale di interazione ha un raggio d'azione molto più corto che per il potenziale elettromagnetico. Per la conversione ho sfruttato che
+\begin{equation}
+	\hbar c =1 =200MeV fm \Rightarrow 1 fm = \frac{1}{200}MeV^{-1} = 5 GeV^{-1}
+\end{equation}
+In conclusione le particelle di mediazione deboli hanno un corto di raggio di interazione, quindi sono forze a corto raggio non deboli.
+
+
+Sono previsti vertici di interazione tra mediatori di campo.
+
+\newpage
+\subsection{Interazioni forti}
+Innanzitutto si distinguono 3 cariche di colore: \textcolor{red}{Red}, \textcolor{green}{Green} e \textcolor{blue}{Blue}. Ci si aspetta che siano 9 i mediatori visto che $3^3=9$ ma uno di questi è pleonastico. I quanti del campo sono allora 8 e sono i gluoni (g). Si rappresentano con delle molle. Le loro proprietà sono
+\begin{align}
+	&m=0\\
+	&q=0\\
+	&\tau=\infty
+\end{align}
+È importante sottolineare che la carica di colore è 0, quindi due gluoni non possono accoppiarsi con un fotone al contrario di due particelle $W$; tuttavia la carica di colore è diversa da 0 e fa si che i gluoni possano accoppiarsi tra loro. La costante di accoppiamento è notevolmente più forte delle due già viste.
+\begin{equation}
+	\alpha_S = o(10-100)\alpha 
+\end{equation}
+
+L'interazione è definita dal potenziale ed è della forma:
+\begin{equation}
+	V(r)= - \frac{4}{3} \frac{\alpha_S}{r} + kr
+\end{equation}
+ Il comportamento dei gluoni si manifesta in tre diversi fenomeni:
+ 
+ \subsubsection{Libertà asintotica}
+ Dalla struttura della lagrangiana del problema emerge che la forma del potenziale può essere rappresentato come un potenziale che cresce linearmente con la distanza tra le due particelle. Cioè
+ \begin{equation}
+ 	U \underset{r \rightarrow 0}{\longrightarrow} 0
+ \end{equation}
+ Quindi a piccole distanze quark e gluoni si comportano come particelle libere.
+ 
+\subsubsection{Schiavitù infrarossa}
+Viceversa a grandi distanze il potenziale, crescendo linearmente, fa si che quark e gluoni siano fortemente vincolati. Graficando l'andamento del potenziale i moti permessi dalle particelle sono solo quelli per cui $E<U$ e quindi viene introdotta l'\textbf{ipotesi di confinamento}, cioè le particelle sono vincolate ad assumere valori di r tali per cui $E<U$. 
+
+Secondo questa ipotesi se un adrone composto da due quark (un quark e un antiquark) si allontanano, l'energia potenziale cresce con l'allontamento delle particelle  e quindi sarà pertanto favorevole che il legame si rompa e si creino due nuove particelle accoppiate con le due precedenti. Non si sono mai osservati gluoni e quark liberi pertanto esiste il postulato del confinamento per cui sono osservabili solo stati a carica di colore complessiva nulla (adroni).
+ 
+
+\chapter{Urti e vite medie}
+\section{Urti}
+
+Si studiano di seguito urti a due corpi elastici del tipo
+\begin{equation}
+	a b \rightarrow c def...
+\end{equation}
+Saranno conservate le grandezze $E$, $p$, $J$, $q$ e altri numeri quantici. 
+\subsubsection{T $\ll$ t}
+L'idea è che il tempo di collisione è molto minore del tempo tipico in cui si effettua la misura (ovvero confrontare lo stato iniziale con lo stato finale), questo implica che i due stati non sono interagenti allora si possono descrivere come onde piane; sempre per lo stesso motivo si potrà trattare l'hamiltoniana di interazione come una pertubazione dell'hamiltoniana libera.
+
+\subsubsection{Due sistemi di riferimento}
+\begin{itemize}
+	\item \textbf{Fixed target} La particella incidente $a$ e il bersaglio hanno quadrimpulso
+	\begin{align}
+		\vec \P_a = (\sqrt{m^2_a +p_a^2}, 0 , 0 , p_a) \longrightarrow \P'_a = ( \sqrt{m_a^2 +  p_a'^2}, p_a'\sin \theta , 0 , p_a' \cos \theta )\\
+		\vec \P_b = (m_b,0) \longrightarrow \vec \P'_b =( \sqrt{m_b^2 +\vec p'_b} , p_b \sin \varphi , 0 , p'_b \cos \varphi )
+	\end{align}
+	
+	\item \textbf{CM}
+		\begin{align}
+		\vec \P_a = (\sqrt{m^2_a +p^2}, 0 , 0 , p) \longrightarrow \P'_a = ( \sqrt{m_a^2 +  p^2}, p\sin \theta , 0 , p \cos \theta )\\
+		\vec \P_b = (\sqrt{m^2_b +p^2}, 0 , 0 , p) \longrightarrow \vec \P'_b = ( \sqrt{m_b^2 +  p^2}, -p\sin \theta , 0 , -p \cos \theta )	\end{align}
+\end{itemize}
+
+
+\section{Sezione d'urto $\sigma$}
+ La misura di $\sigma$ si ottiene proprio dalla relazione 
+\begin{equation}
+	\boxed{\frac{\N_u}{\N_t}=\frac{\sigma}{\Sigma}\N_b}
+\end{equation}
+$\Sigma$ in un esperimento con bersaglio fisso è l'area del bersaglio, tuttavia gli esperimenti più utilizzati sono i collisori in cui in un acceleratore due particelle viaggiano in verso opposto. 
+
+Nell'acceleratore \textbf{LHC} ci sono protoni ben localizzati che collidono organizzati in bunches a forma di ellissoidi, di semiasse maggiore $5cm$ e semiassi minori $\sigma_x$ e $\sigma_y$. I bunches contengono circa $\N_t=\N_b=10^{11} p$. All'interno dell'elissoide la distribuzione non è uniforme, ma sono distribuiti gaussianamente e i semiassi minori sono le risoluzioni delle distribuzioni, l'area utile per la collisione, $\Sigma$, è data dalla relazione
+\begin{equation}
+	\Sigma = 4 \pi \sigma_x \sigma_y
+\end{equation}
+Dove
+\begin{equation}
+	\sigma_x = \sigma_y = 16 \cdot 10^{-4} cm
+\end{equation}
+Allora
+\begin{equation}
+	\frac{\N_b \N_t}{\Sigma} = \frac{(10^{11})^2}{4 \pi (16 \cdot 10^{-4})^2} =  3 \cdot 10^{26} cm^{-2}
+\end{equation}
+La sezione d'urto per la collisione tra protoni è dell'ordine di
+\begin{equation}
+	\sigma (pp, \sqrt{s}=14 TeV) \simeq o(100mb) = 10^{-25}cm^2
+\end{equation}
+E allora
+\begin{equation}
+	\Rightarrow \N_u = 3 \cdot 10^{26} \cdot 10^{-25} \approx 30
+\end{equation}
+Un singolo evento è considerato come un urto tra due bunches $30-40$ urti di protoni. C'è da notare che i fasci possono collidere più volte nell'acceleratore, il periodo tra una collisione e quella successiva sarà
+\begin{equation}
+	T= \frac{\C}{v}=\frac{27 \cdot 10^3m}{3 \cdot 10^8 m/s} \Rightarrow f=\frac{1}{9} \cdot 10^5 Hz \simeq 10 KHz
+\end{equation}
+Si può anche calcolare
+\begin{equation}
+	\dd{\N_u}{t} = \sigma \underbrace{\frac{\N_b \N_t}{\Sigma} \N_b \cdot f}_{\text{tasso di urti} = \text{Luminosità } \L } = \sigma \L
+\end{equation}
+Per LHC $\L= 10^{34} cm^{-2} s^{-1}$. Si può misurare $\sigma$ come
+\begin{equation}
+	\sigma = \frac{\R_t}{\L} \ \ \ \R_t= \dd{\N_u}{t}
+\end{equation}
+Si distinguono le sezioni d'urto totali e parziali, cioè quella dei singoli componenti dell'urto. Si può essere più dettagliati, cioè definire una sezione d'urto per un processo in particolo tipo produzione di coppie per una certa sezione angolare $\dd{\sigma}{\Omega}$ e anche su un certo spettro di energia. 
+
+\subsubsection{Modello teorico}
+I teorici invece di $\L$ utilizzano $\phi$ che è detta la normalizzazione al flusso. Per operare con risultati Lorentz invarianti si ridefinisce la normalizzazione della densità del numero degli stati in particolare imponendo che 
+\begin{equation}
+	\braket{\psi_i}{\psi_f}=2E \delta (E_i-E_f)
+\end{equation}
+Segue che
+\begin{equation}
+	n =\frac{2E}{V}
+\end{equation}
+Che è \textbf{invariante relativamente per trasformazioni di Lorentz}. 
+
+
+La formula per $\sigma$ è 
+\begin{equation}
+	\boxed{\sigma_{th} = \frac{\R_t}{\phi}}
+\end{equation}
+\begin{itemize}
+	\item $\phi =\boxed{n \vec v}= \left( \P_a \P_b \right)^2 - m_a^2 - m_b^2$ cioè il flusso di particelle incidenti
+
+In un decadimento a due corpi $ab \rightarrow cd$. 
+
+\item $\R_t = 2 \pi |\M|^2 \rho$ \textbf{golden-rule di fermi}
+
+\begin{itemize}
+	\item $\rho$ è il volume nello spazio delle fasi disponibile nello stato finale. Questo parametro che fa riferimento ai possibili arrangiamenti dell'urto, cioè un fattore combinatorio che dipende dagli stati finali.
+\begin{equation}
+	\rho = \underbrace{(2 \pi)^4 \delta ^4 (\vec \P_a + \vec \P_b - (\vec \P_c + \vec \P_d))\cdot}_{\text{conservazione quadrimpulso}}  \prod_f \frac{\overbrace{d^3 \vec p_f}^{\text{numero di stati}}}{(2 \pi)^3\underbrace{2E_f}_{\text{\text{normalizzazione}}}}
+\end{equation}
+
+\item $\M$ è l'elemento di matrice dell'hamiltoniana che è conseguenza della regola d'oro di fermi, in un urto elastico per esempio del tipo $e^- \mu^- \rightarrow e^- \mu^-$ è dato
+\begin{equation}
+	\M \propto \int d^4 x d^4x' \H 
+\end{equation}
+Dove $\boxed{\H = \underbrace{J_\rho}_e \underbrace{A^\rho}_{\mu\rightarrow \gamma}}$ cioè corrente dell'elettrone e potenziale vettore del fotone che è uscito dal muone, per il triangolo di interazione dell'elettrone. 
+\begin{itemize}
+	\item $\mathbf{A^\rho}$ potenziale vettore del fotone generato dal muone
+	
+	Per il fotone vale la relazione del potenziale vettore per cui $\square A^\rho = - \underbrace{J^\rho}_\mu$ dove
+\begin{gather}
+	A^\rho = \tilde A^\rho (\q) e^{iqx} \\\Rightarrow \square A^\rho = - \q^2 A^\rho = - J_\mu ^\rho \\ \Rightarrow \boxed{A^\rho = \frac{1}{\q^2} J^\rho_\mu}
+\end{gather}
+Quindi 
+\begin{equation}
+	\M \propto \frac{1}{\q^2} I (\vec \P_a, \vec \P'_a, \vec \P_b, \vec \P'_b, \vec S_a, \vec S_b)
+\end{equation}
+
+	\item $\mathbf{J_\rho}$ corrente del muone
+	
+	C'è anche la corrente $J^\rho= \boxed{Ze} \psi \underbrace{\gamma^\rho}_{\text{matrice di Dirac}} \psi$. Nell'integrale il contributo di $J$ si manifesta comela contrazione di $J_\rho J^\rho$. Quindi $\M$ si può scrivere in maniera più esplicita come:
+\begin{equation}
+	\M \propto \frac{Z_a Z_b e^2}{\q^2} I (\vec \P_a, \vec \P'_a, \vec \P_b, \vec \P'_b, \vec S_a, \vec S_b) = \frac{Z_a Z_b e^2}{\q^2} \int d^4 x d^4 x' J^\rho J_\rho 
+\end{equation} 
+
+Nel vertice di interazione si ha che 
+\begin{gather}
+	\q^2 = (\P'_a - \P_a)^2 = \P_a'^2 + \P_a^2 - 2 \P_a \P_a'\\
+	=m^2_a + m_a^2 - 2 E_a E'_a + 2 \underbrace{\vec p_a \cdot \vec p'_a}_{p \cos \theta }=
+\end{gather}
+Nel limite ultrarelativistico in cui $E_a \gg m_a$ si ha
+\begin{gather}
+	=- 2E_a^2 ( 1- \cos \theta )\\
+	\Rightarrow \q^2 = -2 E_a^2 \left(1- \cos^2  \frac{\theta}{2}  + \sin^2 \frac{\theta}{2} \right)\\
+	=-4 E_a^2 \sin^2 \frac{\theta}{2} = t
+\end{gather}
+Che è una variabile di mandelastam. Oltre a questa c'è anche
+\begin{gather}
+	s = ( \P_a + \P_b ) ^2 \simeq 2E_a E_b \underbrace{-  2 \vec p_a \cdot \vec p_b}_{+2p^2}
+\end{gather}
+Nel limite ultrarelativistico $E_a=E_b = p$ allora
+\begin{gather}
+	s = 4E^2 = E^2_{cm}
+\end{gather}
+Dove $E_{cm}$ è $=2E$ nel limite ultrarelativistico.
+\end{itemize}
+
+Trovata quindi l'espressione per $\K$ se inserita in $\M$ si ha
+\begin{gather}
+	\M  \propto \frac{Z_a Z_b e^2}{4 E^2 \sin^4 \theta/2} I (\vec \P_a, \vec \P'_a, \vec \P_b, \vec \P'_b, \vec S_a, \vec S_b)
+\end{gather}
+Siccome $\sigma (E, \theta) \propto \M^2$ si ottiene
+\begin{gather}
+	\boxed{\sigma (E,\theta) \propto \frac{(Z_a Z_b e^2)^2}{16 E^4 \sin^4 \theta/2} I^2 (\vec \P_a, \vec \P'_a, \vec \P_b, \vec \P'_b, \vec S_a, \vec S_b)}
+\end{gather}
+Cioè il risultato di Rutherford.
+\end{itemize}
+\subsubsection{Correzione di J, contributo di spin}
+Inserendo lo spin, a una sola particella, si corregge la corrente di Gordon nella forma
+\begin{equation}
+	J^\rho_a = Ze \left( \frac{\vec \P^\rho + \vec \P'^\rho}{m_a} + i \sigma ^{\rho \lambda} ( \vec \P' - \vec \P)_\lambda \right)
+\end{equation}
+In relatività ristretta la velocità è definita come $v_\rho = \frac{\P_\rho}{m}$ qui effettivamente c'è una velocità media ed è di forma classica. Il termine aggiuntivo è un termine di spin. quindi nella corrente fermionica c'è un termine classico legato all'impulso della particella e un termine legato allo spin. 
+
+Scegliendo come asse di quantizzazione la traiettoria del moto su cui viaggia la particella si può definire l'operatore di elicità come $\Lambda = \vec S \cdot \frac{\vec P}{P}$ che avrà autovalori $\lambda = \pm 1/2$ o anche \emph{right/ left}. Siccome essa commuta con H è conservata. Dal punto di vista dello spin, l'urto può essere inteso come una rotazione dell'asse delle traiettoria cioè dell'asse di quantizzazione. $\Lambda$ dopo l'urto può rimanere lo stesso o cambiare segno. La differenza di ampiezza (cioè probabilità di transizione $|\M|^2$) tra i due casi è
+\begin{gather}
+	\A_{\text{spin flip}} \sim \frac{1}{\gamma} \A_{\text{no spin flip}}
+\end{gather}
+Allora nel caso ultra relativistico lo spin flip è soppresso e si può ignorare. Nel caso di un urto di due particelle con spin esistono 4 possibili combinazioni, in particolare il sitema si evolve tra due stati
+\begin{equation}
+	\ket{i} =\ket{j,m} \longrightarrow \ket{f}=\ket{j',m'}
+\end{equation}
+L'ampiezza di transizione è dato dal calcolo
+\begin{equation}
+	\A(i \rightarrow f) = \bra{f} e^{i j \theta} \ket{i} \delta_{j j'}
+\end{equation}
+Note come matrici di Wigner. La matrice di Wigner per la transizione è
+\begin{equation}
+	d^{1/2} = \left(\begin{matrix}
+		\cos \theta/2 & \sin \theta/2 \\ - \sin \theta/2 & \cos \theta/2
+	\end{matrix}\right)
+\end{equation}
+Allora le transizioni sono proporzionali a
+\begin{gather}
+\ket{\frac{1}{2}, \frac{1}{2}} \rightarrow \ket{ \frac{1}{2},\frac{1}{2}} \propto \cos \theta/2\\
+\ket{\frac{1}{2},\frac{1}{2}} \rightarrow \ket{\frac{1}{2}, - \frac{1}{2}} \propto \sin \theta /2 \frac{1}{\gamma}	
+\end{gather}
+Siccome gli stati finali e iniziali sono distinguibili per trovare la probabilità di questo processo si sommano le probabilità. In generale
+\begin{equation}
+	P= \sum_j |\A_j|^2 = \frac{1}{2} \cdot 2 \left (\cos^2 \theta/2 + \frac{1}{\gamma^2} \sin^2 \theta/2 \right) = 1- \beta^2 \sin^2 \theta/2 \simeq \cos^2 \theta /2
+\end{equation}
+Dove il fattore 1/2 perché la particella può essere polarizzata a destra o sinistra non si sa. E il fattore 2 perché considero i casi in cui ho $dx \rightarrow dx $+$dx \rightarrow sx$ e quello speculare.
+
+Infine 
+\begin{equation}
+	\dd{\sigma}{t d \Omega} = \underbrace{\frac{1}{16E^4} \frac{1}{\sin^4 \theta/2} }_{\text{termine di Rutherford}} \underbrace{\cos^2 \theta/2}_{\text{termine di spin}}
+\end{equation}
+Il termine di spin può diventare discriminante per una misura di spin tramite un'analisi angolare.
+
+Ci sono casi in cui lo stato finali e iniziale sono indistinguibili (tipo diffusione compton) se si è in questo caso si sommano le ampiezze e poi si quadrano. In particolare lo stato finale = stato finale.                  
+
+\end{itemize}
+
+
+\subsection{Influenza dell'elicità, annichilazione $e-\mu$}
+Si vuole calcolare la sezione d'urto differenziale in funzione dell'energia del centro di massa e dell'angolo solido $\Omega$.  Esistono due configurazioni diverse, una è il diagramma di feymann e l'altra è quello che succede davvero in laboratorio. In laboratorio ci sono due fasci che vanno in versi opposti e si scontrano, ovvero sdr del cm.
+\begin{equation}
+	\dd{\sigma}{s d\Omega}
+\end{equation}
+In questo caso 
+\begin{equation}
+	\M \propto \underbrace{-}_{\text{carica elettrone}} \frac{Z_f}{\q^2}\sqrt{\alpha} \int d^4 x d^4 x' J^\rho J_\rho
+\end{equation}
+Come già visto 
+\begin{gather}
+	\q^2 = s  = E_{cm} = (2E_b)^2 = 4E_{beam}^2
+\end{gather}
+Considerando lo spin ci sono 4 possibili configurazioni
+\begin{itemize}
+	\item $\mathbf{R_f R_e}$
+	
+	Nella corrente right, per il grafico di feymann, si ha $\lambda = \begin{cases}
+ f: \ \ \lambda=+1/2	\\ \overline f: \ \ \lambda = - 1/2
+ \end{cases}
+$
+Nel caso del laboratorio si ha che 
+\begin{gather}
+\ket{i_{niziale} (e^-e^+)} = \ket{1,1}\\
+\ket{f_{inale} (f \bar f)} = \ket{1,1}	
+\end{gather}
+Perché sono allineati, (disegno lab). L'ampiezza è allora
+\begin{gather}
+	\A_{RR} (\theta) = \bra{f} e^{i J_2 \theta} \ket{i}= d_{11}^1 (\theta) = \frac{1+\cos \theta}{2}
+\end{gather}
+Dove $e^{i J_2 \theta}$ è per passare da un asse di polarizzazione a un altro.
+\item $\mathbf{LL}$
+
+\begin{gather}
+\ket{i_{niziale} (e^-e^+)} = \ket{1,-1}\\
+\ket{f_{inale} (f \bar f)} = \ket{1,-1}	
+\end{gather}
+Per ragionamenti analoghi a quello precedente si ha che l'ampiezza è 
+\begin{gather}
+	\A_{LL} (\theta) = \bra{f} e^{i J_2 \theta} \ket{i}= d_{-1-1}^1 (\theta) = \frac{1+\cos \theta}{2}
+\end{gather}
+
+\item $\mathbf{RL}$
+
+\begin{gather}
+\ket{i_{niziale} (e^-e^+)} = \ket{1,1}\\
+\ket{f_{inale} (f \bar f)} = \ket{1,-1}	
+\end{gather}
+
+\begin{gather}
+	\A_{RL} (\theta) = \bra{f} e^{i J_2 \theta} \ket{i}= d_{1-1}^1 (\theta) = \frac{1-\cos \theta}{2}
+\end{gather}
+
+\item $\mathbf{LR}$ è come $\mathbf{RL}$
+\end{itemize}
+
+Si può notare che l'ampiezza per $RR$ e $LL$ è massima per $\theta=0$, cioè quando lo spin non ruota. Se invece si ha $\theta= \pi$ si avrebbe ampiezza 0, cioè lo spin ruota di 180, evidentemente visto il risultato dell'ampiezza è impossibile ed è per la conservazione del momento angolare. Se la polarizzazione dello stato finale è uguale  a quello dello stato finale sono più favoriti i processi in cui le direzioni coincidono. 
+
+
+Se la polarizzazione è opposta sono favorite le direzione opposte.
+
+Supponendo ora che l'urto non sia descritto non solo dalla carica elettrica ma anche da un fattore $g$ che contiene l'informazione se la carica è Left o Right si aggiunge un termine della forma
+\begin{gather}
+	|g_R^e g_R^f \A_{RR}(\theta) |^2 + |g_L^e g_L^f \A_{LL}(\theta)|^2 +|g_R^e g_L^f \A_{RL}(\theta) |^2 + |g_L^e g_R^f \A_{LR}(\theta)|^2\\
+	[( g_R^e g_R^f)^2+ (g_L^e g_L^f )^2 ] \left( \frac{1+\cos \theta}{2} \right) + [(g_R^e g_L^f)^2+ (g_L^e g_R^f)^2] \left(\frac{1-\cos \theta}{2} \right)\\
+	\boxed{(1+ \cos^2 \theta) \Sigma + 2 \cos \theta \Delta }
+\end{gather}
+\begin{gather}
+			\Sigma = \sum_{i,j=R,L} {g_i^e}^2{g_j^f}^2\\
+		\Delta = {g_R^e}^2 {g_R^f}^2 + {g_L^e}^2 +{g_L^f}^2 - ( {g_R^e}^2 {g_L^f}^2 + {g_L^e}^2 {g_R^f}^2)
+\end{gather}
+I dati del laboratorio si fittano con l'espressione nel riquadro si riesce a capire se l'elicità è influente per lo studio di questi fenomeni, le evidenze sperimentali mostrano che lo spin influisce sul valore della carica.
+
+\newpage
+\section{Decadimenti}
+Le osservazioni sperimentali provano la legge di decadimento, 
+\begin{equation}
+	\N (t) = \N_0 e^{-t/\tau}
+\end{equation}
+con parametro $\tau$ vita media che regola il fenomeno. Questa legge emerge da considerazioni logiche per cui 
+\begin{gather}
+	d \N = - \N(t) dt / \tau\\
+	\Rightarrow \N(t) = \N_0 e^{-t/\tau}
+\end{gather}
+Il parametro $\tau$ è l'unico che ha senso determinare, cioè lo stesso che entrerà nel calcolo dell'hamiltoniana. 
+
+\subsection{Descrizione teorica di vita media e larghezza di decadimento}
+Da un punto di vista quantistico sappiamo che esiste una relazione di indeterminazione
+\begin{gather}
+	\Delta p \Delta x \geq \frac{\hbar}{2}\\
+	\Delta E \Delta t > \frac{\hbar}{2} \Rightarrow \boxed{\Delta E > \frac{\hbar}{2 \Delta t}}
+\end{gather}  
+L'intervallo di tempo che si può dedicare alla misura di un processo coinvolgente una particelle deve essere dell'ordine al più della vita media di essa
+\begin{gather}
+	\Delta t \sim \tau \\
+	\Delta E \sim \Delta m \sim \frac{\hbar}{\tau}
+\end{gather}
+di conseguenza si può creare la relazione $\Gamma \tau = \hbar$, da qua segue che a una particelle si attribuisce una distribuzione di massa se questa è definita in un range. L'equazione di Schrodinger si scrive
+\begin{gather}
+	H \ket{\psi} = E \ket{\psi} \Rightarrow \Psi(t) = \psi_0 e^{imt}
+\end{gather}  
+La probabilità di trovare una particella al tempo $t$ si scrive come
+\begin{equation}
+	P(t) = | \bra{\psi(t) } H \ket{\psi(t)}|^2 = |\psi|^2
+\end{equation}
+Quindi non è una particella che decade nel tempo, perché non descrive la scomparsa della particella. Una particella instabile è descritta da un hamiltoniano NON hermitiano, che deve contenere sia un termine che mostra la comparsa e scomparsa di particelle per garantire la conservazione dell'energia. L'hamiltoniana è della forma 
+\begin{gather}
+	H = M + i \frac{\Gamma}{2}
+\end{gather}
+Dove $M$ è legato alla massa, i pezzi singolo sono hermitiani ma $H$ nel complesso non lo è perché compare un $i$. I pezzi che lo compongono sono tali che
+\begin{equation}
+	\begin{cases}
+		M \ket{\psi} =m \ket{psi}\\
+		\Gamma \ket{\psi} = \gamma \ket{\psi}
+	\end{cases}
+\end{equation}
+
+L'evoluzione temporale sarà quindi
+\begin{gather}
+	A(t) = \psi_0 e^{i(m + i \frac{\gamma}{2} )t}\\
+	\Rightarrow |\psi(t)|^2 = \psi_0^2 | e^{imt}|^2 e^{- \frac{\gamma}{2}t} e^{- \frac{\gamma}{2}t}\\
+	\psi(t) =\psi_0 e^{-\gamma t}\\
+	\int_\S \psi = 1 \iff \psi_0 = \gamma\\
+	\Rightarrow \boxed{\gamma \tau=1}
+\end{gather}
+L'ultima equazione segue dalla corrispondenza con la legge emprica.
+
+Per passare allo spazio delle coordinate spaziale si fa la trasformata di Fourier 
+\begin{gather}
+	\tilde A(E)= \int dt e^{-i Et}A(t) =\\
+	= \psi_0 \int dt e^{-iEt} e^{imt} e^{- \gamma/2 t} \\
+	= \psi_0 \int dt e^{-[i(E-m)+ \gamma /2]t }= \frac{\tilde A_0}{i(E-m) + \gamma/2}
+\end{gather}
+Che si può interpretare come una densità di probabilità
+\begin{gather}
+	P(E) = |\tilde A|^2 = \frac{P_0}{(E-m)^2 + \gamma^2/4}\\
+	P(m)=1 \iff P_0 = \frac{\gamma^2}{4}
+\end{gather}
+dove l'ultima è la condizione di normalizzazione, La funzione è detta curva di Breight Wigner
+\begin{gather}
+	P(E) = \frac{\gamma^2/4}{(m-E)^2 + \gamma^2/4}
+\end{gather}
+Che è una curva a campana regolata da $\gamma$ che è l'inverso di $\tau$ quindi tanto più è grande $\tau$ più è piccata la campana e definita l'energia. Queste due variabili sono canonicamente coniugate.
+
+\subsubsection{Esempio $\mu^-$}
+\begin{gather}
+	\tau = 2.4 \mu s\\
+	\Gamma = \frac{1}{\tau}= \frac{1}{2.4 \mu s} = \frac{\hbar}{2.4} 10^{-6}s^{-1} = \frac{6.6 \cdot 10^{-10}}{2.4} eV 
+\end{gather}
+Quindi esiste un incertezza sulla determinazione della massa, dell'ordine di $10^{-18}$. Una particella che una vita media dell'ordine di $10^{-6}s$ ha una massa ben definita.
+
+\subsubsection{Esempio $Z^0$}
+\begin{gather}
+	\Gamma \simeq 2.5 GeV\\
+	\tau = \frac{\hbar}{\Gamma} = \frac{6.6 \cdot 10^{-16}}{2.5 \cdot 10^9}s \approx 10^{-25}s
+\end{gather}
+
+\newpage
+\subsection{Ampiezza di transizione di fermi}
+Dal modello teorico si riesce a dedurre come si calcola il tempo di decadimento, sperimentalmente l'approccio è una spiegazione di come si misura.
+
+\subsubsection{Esempio} 
+Il decadimento $\beta$, $n \rightarrow p e^- \bar \nu_e$
+L'ampiezza di decadimento per Fermi è $A_\beta \propto \frac{G_F}{\sqrt{2}} J_N^\rho J_{\rho,e}$.
+Un altro esempio, formalmente uguale ma più utile allo studio, è
+\begin{equation} \label{fermi}
+	\mu^- \rightarrow\nu_\mu e^- \bar \nu_e \Longrightarrow 	\boxed{A_\beta \propto \frac{G_F}{\sqrt{2}} J_\mu^\rho J_{\rho ,e}}
+\end{equation}
+Che è più semplice per il fatto che sono coinvolte particelle puntiformi.
+
+Per Feymann invece il processo si legge prima come $\nu_e \mu^- \rightarrow e^- \nu_ \mu $ poi ruotando di $180^o$ il neutrino dell'e si ottiene $\mu^- \rightarrow e^- \nu_\mu \bar \nu_e$.
+
+La $G_F$ nella \eqref{fermi} è l'elemento di matrice dell'hamiltoniana, a differenza di quello calcolato per la sezione d'urto la proporzionalità è leggermente diversa a causa della massa non nulla del mediatore di interazione $W$. In particolare il risultato per il fotone ($m_\gamma =0$) era
+\begin{equation}
+	\square A_\rho = - J_{\mu,\rho} \Rightarrow A_{\mu, \rho}= \frac{J_{\mu, \rho}}{\q^2}
+\end{equation}
+La presenza della massa prevede l'utilizzo dell'equazione di Klein-Gordon:
+\begin{gather}
+	( \square + m^2_W ) W_\rho = -J_{\mu, \rho} \Rightarrow W_\rho = \frac{1}{\q^2 -m_W^2} J^\mu_\rho
+\end{gather}
+Dunque l'ampiezza è data, analogamente al calcolo della sezione d'urto, da
+\begin{equation}
+	A_W = \frac{g_{\mu W}g_{eW}}{\q^2 -m_W^2} J_\mu^\rho J_{\rho,e}
+\end{equation}
+Uguagliandola con l'ampiezza di fermi si trova la costante $G_F$ 
+\begin{gather}
+	A_\beta = A_W\\
+	 \frac{G_F}{\sqrt{2}} J_\mu^\rho J_{\rho ,e} = \frac{g_{\mu W}g_{eW}}{\q^2 -m_W^2} J_\mu^\rho J_{\rho,e}\\
+	 \frac{G_F}{\sqrt{2}} = \frac{g_{\mu W}g_{eW}}{\q \ ^2 -m_W^2}
+\end{gather}
+$G_F$ però è stato dato da Fermi come una costante, questo si può giustificare dal fatto che $\q$ dipende dall'energia del $\mu^-$, assumendo che dia tutta l'energia che può dare si avrebbe che $\Q_{max} = 0.1 MeV$ che è trascurabile rispetto a $m_W=80GeV$. Allora si utilizza un'espressione che tiene conto di questa aprossimazione che è:
+\begin{equation}
+	\frac{G_F}{\sqrt{2}} \simeq \frac{g_{\mu W} g_{e W}}{m^2_W}
+\end{equation}
+
+
+In generale la carica $g_W$ è data dall'espressione: $g_W= \frac{ \sqrt{ \alpha _W}}{2 \sqrt{2}} = \frac{\sqrt{\alpha}}{2 \sqrt{2} \sin \theta_W}$ quindi si può trovare un'espressione per $G_F$ che non dipende dalla carica debole ovvero:
+\begin{equation}
+	\frac{G_F}{\sqrt{2}} = \frac{g_{\mu W}g_{eW}}{m_W^2} = \frac{\alpha}{8 \sin^2 \theta_W} \ \ \ (m_W?)
+\end{equation}
+Storicamente si sono misurate con buona precisione $\alpha_W$ e $G_F$ quindi è stato possibile dare una stime per la previsione di $m_W$
+\begin{equation}
+	m^2_W = \sqrt{2} \frac{\alpha_W}{8 G_F}
+\end{equation}
+Per misurare $W^+$ si può studiare il decadimento $t \rightarrow b W^+$ perché $t$ è un fermione con massa superiore a quella di $W^+$.
+
+\subsubsection{Misura di $G_F$}
+Siccome l'ampiezza di transizione è proporzionale a $G_F$ si possono fare le seguente considerazioni per una misura sperimentale di $G_F$
+\begin{gather}
+	\A_W ( \mu \rightarrow e^- \nu_\mu \bar \nu_e ) \propto G_F \propto \frac{1}{m_W^2}\\
+	\Rightarrow \Gamma ( \mu^- \rightarrow e \nu_\mu \bar \nu_e) = G_F^2 \frac{m_\mu^5}{192 \pi^3} = \frac{1}{\tau_\mu}\\
+	\Longrightarrow G_F = \sqrt{\frac{192 \pi^3}{m_\mu^5 \tau_\mu}} = 1.1663787 \cdot 10^{-5} GeV^{-2}
+\end{gather}
+
+\newpage
+\subsection{Universalità leptonica}
+Per una particella come il tauone il discorso è diverso, siccome può decadere in diversi modi a differenza del muone, si utilizzano le tracce parziali. In particolare se si ha una particella che dallo stesso stato iniziale $\ket{i}$ decade in diversi stati finali $\ket{f_j}$, ad ognuno si associa una larghezza parziale $\Gamma_j$ per cui poi si ottiene $\Gamma$ come
+\begin{gather}
+	\Gamma = \sum_j \Gamma_j \Rightarrow \tau = \frac{1}{\Gamma}
+\end{gather}
+Si può definire la branching ratio, per misurare le singole larghezza parziali, ovvero
+\begin{gather}
+	B_j (i\rightarrow f_j) = \frac{\Gamma_j}{\Gamma} \ \ \text{tale che} \ \ \sum_{j=1}^N B_j=1
+\end{gather}
+La teoria calcola $\Gamma_j$, mentre l'esperimento misura $\Gamma$ e $B_j$
+\begin{gather}
+	\Gamma_j^{th} \overset{?}{=} B_j^{exp} \Gamma^{exp} = \frac{B_j^{exp}}{\tau_j^{exp}}
+\end{gather}
+$\Gamma$ si misura con BW invece $B$ dalla frequenze di decadimenti.  
+
+Facendo il rapport tra le diverse $\Gamma_j$, cioè quelle dei vari decadimenti per esempio del tauone si trova che 
+\begin{gather}
+	\frac{\Gamma_{\tau \rightarrow \mu}}{\Gamma_{\tau \rightarrow e}}= \frac{g_\mu^2 \cancel{ g_\tau^2}}{g_e^2 \cancel{g^2_\tau} } \longrightarrow \frac{B_{\tau \rightarrow \mu}}{\cancel {\tau_\tau}} \frac{\cancel{\tau_\tau}}{B_{\tau \rightarrow e}} = \frac{g^2_\mu}{g_e^2}
+\end{gather}
+Che sperimentalmente viene $1 \pm o (10^{-3})$. Lo stesso discorso si può ripetere per il decadimento che produce l'elettrone
+\begin{gather}
+	\frac{\Gamma_{\tau \rightarrow e}}{\Gamma_{\mu \rightarrow e}}= \frac{g_\tau^2 \cancel{ g_e^2} m_\tau^5}{g_\mu^2 \cancel{g^2_e} m_\mu^5} = \frac{B_{\tau \rightarrow e}}{\cancel {\tau_\tau}} \frac{\cancel{\tau_\tau}}{\underbrace{B_{\mu \rightarrow e}}_{=1}} \Rightarrow \frac{g^2_\mu}{g_e^2} = \frac{B_{\tau \rightarrow e } \tau_\mu m_\mu^5}{\tau_\tau m^5_\tau} = 1 +\pm o(10^{-3})
+\end{gather}
+Questo risultato è prova dell'università leptonica, ovvero che tutte le correnti leptoniche si accoppiano alla $W$ con la stessa carica debole.
+
+\newpage
+\section{Misure di vita media}
+Tipicamente i decadimenti hanno o $\Gamma$ grande o $\tau$ grande. Esistono tre approcci
+\begin{enumerate}
+	\item \textbf{Misure di conteggi}. Si prende un blocco di materia radioattiva e si contano quanti decadimenti avvengono, utilizzando la funzione $\dd{\N}{t} = \N_0 e^{-t/\tau}$ la si interpola. 
+	
+	\item \textbf{Misure di tempo di volo}. Per particelle elementari è complicato averne un blocco proprio per la loro natura, tipo i muoni non si trovano in natura così facilemente. Tuttavia nell'esperimento di Pancini, Piccioni e Conversi, si era riuscito lo stesso a misurare il tempo di volo per i muoni (coincidenza ritardata), questo è di fatto realizzabile per particelle che interagiscono abbastanza tempo con la materia, come appunto i muoni, perché hanno un tempo di decadimento abbastanza lungo. 
+	
+	\item \textbf{Misure di lunghezze di volo}. Il $\tau$ d'altra parte decade praticamente subito, allora invece che misurare il tempo si misura la lunghezza di volo. Un modo di misurarle si considera il processo
+	\begin{equation}
+		e^+ e^- \rightarrow \tau^+ \tau^-
+	\end{equation}
+	vicino all'energia di soglia però non si riesce a misurare la larghezza di volo, quindi bisogna fornire più energia in modo che sia misurabile, nel senso che ha una lunghezza sufficientemente visibile. Si scelgono allora due decadimenti opportuni, nel LEP ci sono circa $100.000$ produzioni di coppia di tau a esperimento. Si considera il decadimento
+	\begin{gather}
+		\tau^+ \rightarrow e^+ \nu_e \bar \nu_\tau \text{ tag}\\
+		\tau^- \rightarrow \pi^- \pi^+ \pi^- \nu_\tau \text{ probe}
+	\end{gather}
+	Questa tecnica viene detta tag e probe. In sostanza si osservano i risultati dei decadimenti di tag e probe, si trovano i due vertici dei due decadimenti tag e probe ricostruendo le tracce dei risultati di questi decadimenti e noto il vertice dell'urto primario $e^+e^-$ si intersecano per trovare la lunghezza di volo. Trovata la lunghezza $L$ con il boost di Lorentz si ottiene:
+	\begin{equation}
+		L= \beta \gamma c t
+	\end{equation}
+	t è il tempo proprio $t= \frac{L}{c \beta \gamma}$, poi $\beta = p_\tau / E_\tau$ e $\gamma = E\tau / m_\tau$. Allora il momento si ottiene a partire dall'energia dei due elettroni $s^2$.
+	\begin{gather}
+		\beta \gamma = \frac{p_\tau}{m_\tau}\\
+		E_\tau = \frac{\sqrt{s}}{2} \Rightarrow p_\tau = \sqrt{E_\tau^2 - m_\tau^2}
+	\end{gather}
+\end{enumerate}
+
+	\subsubsection{Esempio: K corto}
+	Se si considera il decadimento 
+	\begin{gather}
+		p p \rightarrow K_s + X\\
+		K_s \rightarrow \pi^+ \pi^-
+	\end{gather}
+	Qui l'energia del $K_S$ non è più $\sqrt{s}$ perché ci sono altri X decadimenti, ma rivelati i pioni si trova la loro energia $E_{k_s} = E_{\pi^+}+ E_{\pi^-}$. Tuttavia le risoluzioni sperimentali dell'energia del K corto sono tali per cui non si riesce a trovare un risultato compatibile con il tempo di vita media. cioè il grafico di BW che viene prodotto è troppo largo e la sua larghezza a metà altezza che dovrebbe essere $\Gamma$ se moltiplicato per $\tau$, ottenuto da esperimenti, non da 1.
+
+
+\section{Risonanze}
+Esistono due diversi approcci sperimentali nella misura e ricostruzioni di stati risonanti
+\begin{itemize}
+	\item in formazione "formation", cioè ricostruzione mentre forma la risonanza. La formula che la descrive rappresenta come varia la sezione d'urto, e quindi il numero di conteggi, in funzione dell'energia quando si produce uno stato risonante
+	\begin{equation}
+		\sigma = \dd{\N}{\sqrt{s}} \propto \frac{s \Gamma^2}{(s-M^2)^2 + s \Gamma^2}
+	\end{equation}
+	Se la curva è questa mi aspetto che i conteggi si distribuiscono così, cioè a mo di BW, infatti si chiama BW relativistica o RBW. C'è questa e non l'altra (indietro) perché questa è stata trovata una volta studiata tutta la teoria dei propagatori della QCD. Se $\Gamma \ll M$ allora $RBW \rightarrow BW$. Questa funzione è simile a quella di un circuito RLC risonante, basta sostituire $M \rightarrow \omega_0 = \frac{1}{LC}$ e $\Gamma \rightarrow \gamma =\frac{R}{L}$ e $\sqrt{s} \rightarrow \omega$. In pratica si possono regolare l'energia del centro di massa dei due fasci incidenti e si può guardare e quindi studiare l'ampiezza del segnale in formazione. Sono molto precise perché bisogna ricostruire la massa nel centro di massa.
+	\item in decadimento "dacay". Si utilizza sempre l'equazione BWR e si fitta però a posteriori, nel senso che si fa un istogrammi di eventi che si distribuisce così. Si ricostruisce dai risultati dei decadimenti, che è difficile da fare in maniera precisa.
+\end{itemize}
+
+\subsubsection{Esempio: quadrupletto delle delta}
+Si prende un fascio di $\pi^\pm$, entro certi limiti, si può variare l'energia del fascio, se inserito un bersaglio di idrogeno i pioni interagiscono con i protoni (int. forte). Lo stato finale avrà due possibili cariche
+\begin{gather}
+	\pi^+ p \rightarrow q=2 \Rightarrow \Delta^{++}\\
+	\pi^- + p \rightarrow q=0 \Rightarrow \Delta^0
+\end{gather}
+La $\Delta^{++}$ può produrre solo adroni (interazione forte), in particolare produce solo $\pi^+ p$ quindi è un processo elastico. 
+
+La $\Delta^{0}$ può dare o sempre lo stesso risultato ma anche 
+\begin{gather}
+	\pi^- p \\
+	\pi^0 n
+\end{gather}
+
+Fino a $1GeV$ tutti i processi sono elastici, sopra $1.5 GeV$ sono prodotte altre particelle.
+
+
+
+
+I processi di risonanza sono stati possibile utilizzando collisori $e^+$ e $e^-$.
+
+Se si guarda un grafico con presenti tutte le risonanze, si ha che ci sono zone di continuo, cioè assenti di risonanze.
+\begin{equation}
+	\dd{\sigma}{\sqrt{s}} \propto \frac{4 \pi \alpha^2}{3s} = \sigma(e^+e^- \rightarrow \mu^+ \mu^-)
+\end{equation}
+Ci sono comunque tante strutture risonanti, più o meno larghe. 
+\begin{itemize}
+	\item Attorno ai 3GeV c'è la zona del charmonio. Lo stato del charmonio è stato scoperto sia in decadimento che in formazione. Per il decadimento sono stati sparati protoni da 28 GeV su di un bersaglio di berillio. Quando un protone collide con il berillio produce uno stato finale molto vario, coi rivelatori si cercano stati finali rari siccome sono eventi adronoci si cercano $\mu^- \mu^+$. Calcolando la massa invariante momento per momento sappiamo che si distribuisce 
+	\begin{equation}
+		m (\mu^+ \mu^-) = ( \q_{\mu^+} + \q_{\mu^-})	
+	\end{equation}
+	
+	\item attorno ai $9$GeV invece si sono scoperti i due stati legati dei quark top beauty
+\end{itemize}
+
+
+%Per le misure Z, si usa un collisore di protoni e 
+
+
+
+\chapter{Simmetrie e leggi di conservazione (e regole di selezione)}
+\toc
+\section{Introduzione}
+\subsubsection{Perché le simmetrie sono importanti?}
+Secondo Feyman una cosa è simmetrica se è possibile in qualche modo modificarla senza rendersi conto delle differenze.
+
+
+Innanzitutto bisogna osservare che le invarianze non sono evidenti, ma per il corso non è quello che si intende per simmetria, bisogna intenderlo al livello fondamentale ed elementare. Secondo le trasformazioni di coordinate di Galileo e Lorentz per la fisica relativistica le leggi della fisica sono le stesse, cioè invarianti, per ogni sistema di riferimento. Questo garantisce che si possono utilizzare risultati di un laboratorio e applicarli, o estenderli, per esempio a oggetti come stelle e determinarne le caratteristiche fisiche.
+
+\subsubsection{Simmetrie continue}
+Una simmetria continua è un tipo di trasformazione che può essere fatta attraverso un infinita successione di passi infinitesimi e l'invarianza per ogni passo è mantenuta. Il teorema di Noether dice che associata ad ogni invarianza c'è una legge di conservazione. Dall'invarianza spaziale si conserva la quantità di moto, dalla temporale l'energia e dalla rotazione il momento angolare. Un altro modo di formulare la fisica è dire che il mondo è invariante per traslazione, rotazione e spostamento nel tempo e gli spostamenti possibili sono quelli che minimizzano l'azione.
+
+Con l'EM e la teoria dei campi compare inoltre l'invarianza di gauge che è legata alla conservazione della carica elettrica.
+
+ 
+\subsubsection{Simmetria discreta}
+Si tratta di simmetrie che non possono essere ottenute attraverso una successione infinita di trasformazioni infinitesime. Esse sono legate a scelte arbitrarie, ma necessarie, che vengono fatte quando si cerca di rappresentare il mondo in maniera matematica. Un esempio è la scelta degli assi di riferimento, per esempio con un criterio levogiro o destrogiro, la trasformazione che cambia il sdr da levogiro a destro giro è detta \textbf{parità}. 
+
+
+\section{Parità}
+Preso un punto generico $P$ sul piano cartesiano levogiro esso ha posizione $\vec r$:
+\begin{equation}
+	\vec r \ = \vettore{x \\ y \\ z}
+\end{equation}
+Utilizzando un sistema destrogiro $\vec r$ avrebbe assunto la forma, si passa da un sdr all'altro invertendo un numero dispari di assi in questo caso 3 (per convenzione). Allora nel sistema destro giro si ha $\vec r \ '$ della forma
+\begin{equation}
+	\vec r \ '= \vettore{x' \\ y' \\ z'}=
+\vettore{-x \\ -y \\ -z}
+\end{equation}
+Si può generalizzare dicendo che $\P \vec V = - \vec V$.  Il momento angolare sottoposto a parità non cambia rappresentazione infatti 
+\begin{gather}
+	\P \vec L = \P ( \vec r \times \vec p ) = \P \vec r \times \P \vec p = - \vec r \times - \vec p = + \vec L 
+\end{gather}
+Allora perché si conservi la rappresentazione, cioè ha lo stesso significato ma è composto da vettori invertiti, deve essere che $\vec L$ cambi direzione, infatti se si usa invece della regola della mano destra quella della mano sinistra vengono segni diversi. I vettori che si comportano così sono detti \textbf{pseudo vettori}. Gli pseudo vettori sono:
+\begin{gather}
+	\vec L , \ \vec \omega , \ \vec M
+\end{gather}
+Questa cosa è diversa per i prodotti scalari che sono invarianti sotto parità. Il prodotto scalare di due pseudo vettori rimane uguale
+\begin{equation}
+	s = \vec{ PV} \cdot \vec{PV}  = \vec V \cdot \vec V 
+\end{equation}
+Per avere un cambio di segno bisogna moltiplicare un vettore con un pseudo vettore
+\begin{gather}
+	a= \vec V \cdot \vec{P V} \Rightarrow \P(a)=-a \Rightarrow \boxed{\text{pseudo scalari}}
+\end{gather}
+In questo caso $a$ è detto \textbf{pseudo scalare}. Un esempio di pseudo scalare è l'elicità. 
+
+
+Quando parliamo di una particella (o di un campo di particelle) come scalare, vettore, pseudoscalare o pseudovettore, ci stiamo riferendo al modo in cui la particella o il campo trasforma sotto le simmetrie di Lorentz e di parità. Ad esempio, un campo scalare è uno che non cambia sotto le trasformazioni di Lorentz, mentre un campo vettoriale ha componenti che si mescolano tra loro sotto le trasformazioni di Lorentz. Un campo pseudoscalare o pseudovettoriale è uno che cambia segno o le cui componenti si mescolano in un modo particolare sotto le trasformazioni di parità.
+
+\subsubsection{Elenco di grandezze}
+$\vec E $ è vettore, \\
+$\vec j = nqv$ è vettore\\
+$B= \vec v \times \vec E$ è pseudo vettore, perché prodotto vettore di due vettori\\
+$\vec A$ è vettore $\P \vec A = \vec A' = - \vec A$\\
+
+
+\subsection{Parità in MQ}
+In generale le autofunzioni degli stati quantistici hanno parità ben definita Questa definizione non è arbitraria ma è una caratteristica che aiuta a definire la natura della particella. 
+
+\subsection{Parità del fotone}
+Si può assegnare al fotone una parità negativa con il principio di corripondenza, cioè al livello microscopico le proprietà devono essere compatibili con quelle macroscopiche
+\begin{gather}
+	\P \vec A = - \vec A \Longrightarrow \boxed{\P \ket{\gamma} =- \ket{\gamma}}
+\end{gather}
+
+\subsubsection{Transizioni elettroniche}
+Durante una transizione elettronica la parità si conserva. Studiando il caso di una transizione da $\ket{\ell+1} \rightarrow \ket{\ell}$ in cui viene emesso un fotone si ha che
+\begin{gather}
+	\P(i) = \P(\ell) = \P (Y_{\ell+1}^m) = (-1)^{\ell+1}\\
+	\P(f) = \P(\ell) + \P (\gamma)= \P (Y_\ell^m) \times (-1)= (-1)^{\ell+1}
+\end{gather}
+E quindi è confermato anche l'autovalore di parità per il fotone.
+
+Con misure di parità è quindi possibile dare informazioni rispetto al momento angolare. In particolare se $\ell=0$ si ha $\P (0)=-1$. 
+
+
+
+
+\subsection{Misure di parità del $\pi^0$}
+Il pione 0 è dato da 
+\begin{equation}
+	\frac{1}{\sqrt{2}} \ket{- u \bar u + d \bar d} 
+\end{equation}
+È uno stato simile al positronio, l'unica differenza è che sono legati dalle interazioni forti e non deboli. Questo è equivalente in particolare al parapositronio. Ci si aspetta dunque che abbia parità $J^p=0^-$. Anch'esso è uno pseudo scalare. I modi di decadimento di $\pi^0$ sono
+\begin{gather}
+	\pi^0 \rightarrow 2 \gamma \ \ (98\%)\\
+	\pi^0 \rightarrow \gamma e^+ e^- \ \ (2 \%) \text{ Daliz}\\
+	\pi^0 \rightarrow (e^+e^-) (e^+ e^-) \ \ (\sim 10^{-4} ) \text{ doppio Daliz} \\
+\end{gather}
+Quindi nel $2 \%$ dei casi il fotone non è reale ma virtuale e quindi è tale da non viovere sufficientemente per essere rilevato e produce una coppia positrone ed elettrone, oppure possono essere entrambi virtuali e ottenere un doppio Daliz. 
+
+Per gli esperimenti si usano i Doppi Daliz perché si hanno le direzioni dei due piani di decadimento $\pi^1$ e $\pi^2$. il campo elettrico corrispondente ai due fotoni prodotti è perpendicolare rispettivamente ai piani di produzione dei due elettroni. L'angolo compreso tra i due campi elettrici è uguale all'angolo compreso tra i due risultati di decadimento. L'ampiezza di transizione è una funzione di questo angolo compreso e può essere di tipo $\cos$ quindi pari, o di tipo $\sin$ cioè dispari. Quindi plottando, e fittando, l'intensità degli eventi basta vedere come si distribuiscono per trovare la parità della particella.
+
+
+\newpage
+\section{Coniugazione di carica}
+È possibile caratterizzare la funzione d'onda coniugando la carica ovvero trasformando una particella nella sua antiparticella invertendo
+\begin{itemize}
+	\item cariche
+	\item numero barionico
+	\item sapore leptonico
+	\item sapore adronico
+	\item terza componente di isospin forte
+	\item terza componente di isospin debole
+\end{itemize}
+Gli autovalori dell'operatore coniugazione di carica sono $\pm 1$. In generale l'operatore agisce come:
+\begin{gather}
+	\Cc \ket{f} \rightarrow \ket{\bar f}
+\end{gather}
+
+
+Non tutte le particelle però sono autostati dell'operatore di coniugazione, tipo l'elettrone se si coniuga la carica diventa il positrone, che è diverso perché ha carica opposta.  Affinché sia autostato, allora, una particella deve essere anche la propria antiparticella, il caso del fotone. Anche il positronio cioè $e^+ e^-$ rimane lo stesso, quindi è autostato. In generale uno stato legato 
+\begin{gather}
+	\ket{f \bar f'} \overset{\Cc}{\longrightarrow} \ket{f' \bar f} \ \text{No}\\
+	\ket{f \bar f} \overset{\Cc}{\longrightarrow} \ket{f \bar f}
+\end{gather}
+
+\subsection{Fotone coniugato $\gamma$}
+Se al campo elettrico si applica la coniugazione di carica? Per esempio nel caso di una carica positiva si ha il campo elettrico con linee di campo uscenti, poi si cambia il segno perché le linee di campo sono entranti per cariche negative. Allora
+\begin{gather}
+	\vec E \ ' = \Cc \vec E = - \vec E\\
+	\vec B \ ' = \Cc \vec B = - \vec B\\
+	\vec A \ ' = \Cc \vec A = - \vec A
+\end{gather}
+Dove le ultime due sono conseguenze della prima equazione. Allora l'autovalore di $\gamma$ sarà $-1$. In modo simbolico
+\begin{gather}
+	J_\gamma ^{\P \Cc} = 1^{--}
+\end{gather}
+
+\subsection{Coniugazione di carica del $\pi^0$}
+Tornando all'esempio precedente si ha che 
+\begin{gather}
+	\Cc ( \pi^+ ) = c_\gamma c_\gamma =+1
+\end{gather} 
+Quindi un decadimento del tipo $\pi^0 \rightarrow \gamma \gamma \gamma$ non è osservabile, o meglio è $<10^{-8}$.
+
+\subsection{Coniugazione del super $\pi^0$: $\rho^0$}
+Il $\rho^0$ è come un $\pi^0$ con spin 1 invece di 0. Per le conservazioni del momento angolare si può verificare
+\begin{gather}
+	\rho^0 \rightarrow \pi^0 \gamma
+\end{gather}
+Complessivamente l'autovalore della coniugazione di carica della parte di destra è $-1$ e quindi anche quella di $\rho^0$. Sempre guardando gli autovalori di $\Cc$ si possono discriminare quali decadimenti possono avvenire, per esempio
+\begin{gather}
+	\rho^0 \rightarrow \pi^0 \pi^0 \\
+	\Cc ( \pi^0 \pi^0) \Rightarrow c= 1 \neq \Cc (\rho^0) 
+\end{gather}
+
+
+\subsection{Approccio teorico}
+In generale per uno stato $\Cc \ket{f \bar f}= c \ket{ f \bar f}$, questa operazione corrisponde a un'operazione di parità combinata a una di antisimmetrizzazione (nel caso dei fermioni)
+\begin{gather}
+	\Cc = \P \times (-1)^{S+1}
+\end{gather}
+Dove il secondo termine viene dal fatto che se $S=0$ è lo stato di singoletto cioè quello in cui si hanno fermioni
+\begin{gather}
+	\Cc = (-1)^{\ell +1} (-1)^{S+1} = (-1)^{\ell+ S \cancel{+2}}
+\end{gather}
+
+\begin{gather}
+	\begin{matrix}
+		L & 0 & 0  & 1& 1 & 1 & 1\\
+		S &0 &1& 0&1 & 1&1 \\ \\
+		J &0 & 1 & 0 & 1& 1 & 1\\
+		P = (-1)^{\ell+1} & - & - & +& + & + &+\\
+		C = (-1)^{\ell+S} & + & - &- & + & + &+ \\ \\
+		J^{\P \Cc} &0^{-+} & 1^{- - } & 1^{+-} & 0^{++} & 1^{++} & 2^{++}
+	\end{matrix}
+\end{gather}
+$0^{--}$ è il $\pi^0$, $1^{++}$ è il fotone o il $\rho^0$. Quindi si possono classificare le particelle così.
+
+\subsubsection{Positronio}
+Gli stati fondamentali del positronio sono 
+\begin{itemize}
+	\item $\boxed{^1 S_0}$ parapositronio $\frac{\ket{\uparrow \downarrow } - \ket{\downarrow \uparrow}}{2}$ con $\ell =0$, $s=0$ e $J=L+A \rightarrow j=0$ ed è un pseudoscalare. È uno stato $J^{\P \Cc} = 0^{-+}$
+	\item $\boxed{^3 S_1 }$ ortopositronio, è simmetrico $\frac{\ket{\uparrow \downarrow } + \ket{\downarrow \uparrow}}{2}$ e $J=L+S =S=1$
+\end{itemize}
+
+Per farsi un'idea di come capire lo stato del positronio tramite i risultati di annichilazione si può notare che lo stato finale del positronio è solo $n \gamma $. Però il parapositronio produce due fotoni per conservare la coniugazione di carica, l'ortopositronio è uno stato $J^{\P \Cc } = 1^{--}$, l'orto invece tre sempre per lo stesso motivo. 
+
+Dalla formula empirica di massa $m_{positronio} \simeq 2 m_e + E_{bound}$ che in ottima approssimazione $m \simeq 2 m_e$ perché $E_{bound} \simeq 13.6/2$. 
+
+\subsubsection{Charmonio $c \bar c$}
+%todo
+
+\newpage
+\section{Inversione temporale}
+Tutte le equazioni della dinamica sono simmetriche per inversione temporale. La simmetria si rompe con l'entropia, o meglio con il diverso ordinamento di stati successivi.  Dal punto di vista dei processi elementari del corso sono utilizzate entrambe le nozioni, la regola di fermi ha in se $d \rho$ che è un termine statistico non invariante che fa riferimento alle diverse distribuzioni statistiche dei risultati del processo, poi c'è $\M$ che invece è invariante e contiene la fisica del processo studiato.
+
+
+\chapter{Adroni}
+\
+Gli adroni sono le particelle soggette a interazioni forti.
+
+\section{Prove che p e n non sono elementari}
+\subsubsection*{Rapporto giromagnetico}
+Una delle prove che il protone è un insieme di più particelle elementari è il suo rapporto giromagnetico. Nel caso di un elettrone che orbita attorno al nucleo si ha
+\begin{gather}
+	\vec \mu_S = g \frac{q_e}{2 m_e} \vec S
+\end{gather} 
+Dove $g=2+ o\left( \frac{\alpha}{\pi} \right)$ è il rapporto giromagnetico, l'eq. di Dirac prevede che tutti i fermioni abbiano $g=2$. Analogamente all'elettrone per il protone si può riscrivere la formula
+\begin{gather}
+	\vec \mu_S = g \frac{q_p}{2 m_p} \vec S
+\end{gather} 
+Solo che qui $g=2.79$. Anche i neutroni hanno un rapporto giromagnetico, si potrebbe pensare che sia 0 visto che è neutro, tuttavia è $g_N = -1.9$. Questo ci fa capire che non sono particelle elementari perché non rispettano i risultati delle equazioni di Dirac. (I neutrini che rispettano l'eq. di Dirac hanno effettivamente $g=0$; quando le supernove esplodono arrivano con la stessa velocità della luce quindi hanno massa piccola e seguono la stessa traiettoria dei fotoni e con tutti i campi magnetici che ci sono se avessero rapporto giromagnetico diverso da 0 verrebbero deviati lungo il loro percorso). 
+
+\subsubsection*{Scattering}
+L'altro modo per comprendere la natura non elementare di protone e neutrone è fare un esperimento alla Rutherford. In particolare esperimenti di collisione di protoni ad alta energia (quindi alta $\q \ ^2$) deviano dalla predizione di Rutherford e quindi si deduce che ci sia una sottostruttura.
+
+\newpage
+\section{Classificazione}
+\toc
+\subsection{Spin}
+
+Il primo criterio di suddivisione è fermioni (barioni) e bosoni (mesoni). I quali hanno spin secondo la legge
+\begin{gather}
+	S_{barioni} = \frac{2n+1}{2}\\
+	S_{mesoni} = n
+\end{gather}
+
+\subsection{Momento angolare}
+I barioni si suddividono a loro volta per $J^\P$ che può assumero valore $1/2$ (p,n) o $3/2$ ($\Delta$).
+
+I mesoni possono avere spin $0$ ($\pi^\pm, \ \pi^0$) o $1 \ (\rho, \ \omega, \ \phi , \ J/ \psi$ o $2$ $\psi_-$)
+
+\subsection{Numero barionico $\B$}
+Siccome non si osservano transizioni in cui si è presente la violazione del numero barionico è stato introdotto questo nuovo numero quantico. È un fatto empirico. Questo si applica solo ai barioni perché l'adrone più leggero $\pi^0$ che decade $\pi \rightarrow \gamma \gamma$ non è stabile quindi non è "protetto" da nessun numero quantico. Siccome il neutrone decade in un protone allora si deduce 
+\begin{gather}
+	n \rightarrow p e \nu_e
+\end{gather}
+che si possa associare lo stesso numero barionico a protone e neutrone, +1. Ai mesoni si associa come numero barionico 0.
+
+
+Ci sono quindi numeri quantici conservati senza una simmetria a priori. Allora si possono introdurre dei numeri quantici parzialmente conservati o simmetrie parzialmente verificate.
+
+
+\subsection{Iso spin I}
+Si possono dividere gli adroni secondo questo criterio
+\begin{equation}
+	\begin{matrix}
+		& \B& m (MeV)& \Delta m (MeV) & J\\
+		p , n & 1 & 940 & 1 & 1/2 \\
+		\pi^+ \pi^- \pi^0 & 0 & 140 & 3 & 0\\
+		\Delta^{++} \Delta^+ \Delta^0 \Delta^- & 1 & 1230 & o(1) & 3/2
+	\end{matrix}
+\end{equation}
+Bohr ipotizza che la struttura di queste particelle possono essere spiegate come autofunzioni dell'operatore di iso spin ovvero spin isotopico, che obbedisce alle stesse leggi dello spin tradizionale. Lo spin gode del gruppo di simmetria $SU2$. Per l'isospin lo stato è il nucleone N, che può avere due valori $p \rightarrow +1/2$ e $n \rightarrow -1/2$, qui non c'è nessuna degenerazione perché misurando la carica si riesce discriminare la particella. Secondo Bohr questi sarebbero stati degeneri se non ci fossero state le interazioni elettromagnetiche, tipo che se il mondo fosse soggetto a un forte campo magnetico non ci sarebbe degenerazione di spin e quindi le particelle si distinguerebbero. Allora protone e neutrone sono due stati degeneri dello stato di Nucleone dell'operatore di isospin.
+\begin{gather}
+	I \ket{p} = +\frac{1}{2} \ket{p}\\
+	I \ket{n} = -\frac{1}{2} \ket{n}
+\end{gather}
+Adottando l'isospin si addotta la stessa algebra di spin e quindi anche le composizioni di momenti angolari e funziona fin tanto che non si rompe la degenerazione. 
+
+
+Il postulato di Bohr allora dice che se ci fossero solo le interazioni forti allora protone e neutrone sarebbe stati degeneri di nucleone. 
+
+CHAT GPT inoltre sostiene che l'isospin è un concetto introdotto principalmente per descrivere la simmetria tra i quark up (u) e down (d) nelle interazioni forti. Non è quindi un'operatore che descrive simmetrie per gli altri quark, l'idea di isospin può essere estesa ad altri quark. Ad esempio, i quark charm (c) e strange (s), che sono la "seconda generazione" di quark, possono essere considerati come un'altra coppia di "isodoppi". Allo stesso modo, i quark top (t) e bottom (b), che sono la "terza generazione" di quark, possono essere considerati come un altro isodoppio. Questo è un'estensione del concetto di isospin chiamata "isospin debole" o "isospin flavour", e può essere utile in alcuni contesti, come nell'analisi delle interazioni deboli.
+
+\subsubsection{Esempio $\Delta^+$}
+Il $\Delta^+ $ decade come
+\begin{equation}
+	\Delta^+ \begin{cases}
+ 	p^+ \pi^0\\
+ 	n \pi^+
+ \end{cases}
+\end{equation}
+È sbagliato pensare che la $\Delta$ decade in questi due modi con equa probabilità. Classificando in termini di isospin lo stato iniziale e finale
+\begin{gather}
+	\ket{i} = \ket{\Delta^+} = \ket{3/2 , 1/2}\\
+\end{gather}
+Calcolando i coefficienti di Clebsh gordan per gli stati finali si trova che i coefficienti di tali stati elevati al quadrato sono le probabilità cercate.
+
+\subsubsection{Rottura di degenerazione di isospin}
+L'isospin è rotto dalle interazioni EM (fare il calcolo dell'energia interna di un protone e di un neutrone) e dalla massa dei costituenti.
+
+
+\subsection{Regola di Gell-Mann Nishijma}
+Indipendentemente dal tipo della transizione si osserva che tra le correnti adroniche  dello stato iniziale e finale si osserva che
+\begin{gather}
+	i \rightarrow f \\
+	\Delta Q = \Delta I_3
+\end{gather}
+Considerendo il decadimento $\beta$ del neutrone ci si concentra solo su
+\begin{gather}
+	\boxed{n \rightarrow p} e^- \bar \nu _e
+\end{gather}
+Si ha che 
+\begin{gather}
+	\Delta I_3 = I_3^f - I_3^i = \frac{1}{2}- \left( - \frac{1}{2} \right) =+1\\
+	\Delta Q = Q_f - Q_i = +1 - 0 = +1
+\end{gather}
+
+\subsection{Misure di $\Lambda$}
+Se si considera 
+\begin{gather}
+	\pi^- p \rightarrow \Lambda ^0 K^0
+\end{gather}
+La cui sezione d'urto $\sigma \sim mb$, cioè un processo forte perché la sezione d'urto è grande (si conserva pure l'isospin)
+
+
+Con $m_K=500MeV$, $J^\P =1^-$, $\tau=10^{-10}s$, $\B =0$, $S=0$.
+
+La terza componneta di isospin per $K$ è invece $-1/2$.
+
+\noindent \textbf{Cosa si può dedurre su $\Lambda$?} 
+\begin{enumerate}
+	\item Dalla conservazione del numero barionico si ha che $B( \Lambda^0)=1$, è un barione 
+	\item Visto che è un barione ha spin 1/2
+	\item Conservazione della carica $\Rightarrow Q=0$
+	\item La terza componente dell'isospin deve essere $=0$, potrebbe essere un tripletto ma siccome non si osservano altre particelle si conclude che è un singoletto.
+\end{enumerate}
+
+\subsubsection{Decadimento di $\Lambda^0$}
+\begin{equation}
+	\Lambda^0 \rightarrow P \pi^-
+\end{equation}
+L'isospin vale $0$ per stato iniziale, $-1/2$ per lo stato finale. È un decadimento debole infatti l'isospin non si conserva. (La vita media $\sim 100 ps$.) La carica invece si conserva:
+\begin{gather}
+	\Delta I_3 = -1/2 \neq \Delta Q=0
+\end{gather}
+A causa di questa stranezza è stato introdotto un nuovo numero quantico, la
+
+\subsection{Stranezza $\S$}
+Come l'isospin è conservata per le interazioni forti, quasi sempre da EM e violata dalle interazioni deboli.
+
+In pratica si assegna alle particelle che violano l'isospin la stranezza $S(\Lambda^0)=-1$ e quelle che non la violano $S(p)=S(n)=S(\Delta) = S(\pi) =0$.
+
+Quindi se si verifica
+\begin{gather}
+	\pi^- p \rightarrow \Lambda ^0 K^0
+\end{gather}
+Si può attribuire la stranezza di $K$ come $\S(K^0) = -\S(\Lambda^0)=+1$, $\S(K^+)=+1, \ \S(K^-)=-1$ così si giustifica anche il fatto che $\overline K^+ \neq K^-$, perché sono stati diversi.
+
+\subsection{Ipercarica $\Y$}
+Altro numero quantico è l'ipercarica $\Y=\S+\B$ e la regola di Gell-Mann diventa così
+\begin{gather}
+	\Y = \S+ \B = 2(Q-I_3)
+\end{gather}
+
+
+
+\newpage
+\section{Modello a quark}
+
+Dividiamo le particelle note in 4 famiglie
+\begin{gather}
+	J^\P = \begin{matrix}
+		\boxed{0^-} & \boxed{1^-} & \text{ mesoni}\\
+		\boxed{1/2^+} & \boxed{3/2^+} & \text{barioni} 
+	\end{matrix}
+\end{gather}
+\subsection{$1^-$ mesoni}
+Sono 3$\pi$, 2$K$, 2$\bar K$ e si dispongono ad esagono in un piano dove $y=\Y$ e $x=I_3$. Si può costruire un equivalenza tra la forma geometrica e l'algebra dei gruppi, in particolare l'esagono si può scomporre in triangoli equilateri e l'algebra $SU(3)$ si può decrivere come la combinazione di tre componenti elementari. I tre componenti elementari sono stati chiamati quark $u d s$ da Gell Mann e hanno tutti numero barionico $\B=1/3$ e isospin $I(u)=1/2$, $I(d)=-1/2$ e $I(s)=0$, invece stranezza ce l'ha solo $s$ e vale $\S(s)=-1$.
+
+\subsection{Carica di colore}
+Costruendo il noneto dei barioni emerge che alcune particelle sono costituite da stessi quark con stesso spin, violando il principio di esclusione di Pauli. Si introduce così un ulteriore numero quantico tale per cui la funzione d'onda sistema il principio di esclusione di pauli. La funzione d'onda diventa così
+\begin{gather}
+	\psi = \psi_{flavour} \psi_{space} \psi_{spin} \psi{colour}
+\end{gather}
+
+\newpage
+\section{Verifiche di QCD}
+\subsection{Ipotesi di confinamento}
+È un'ipotesi dovuta a osservazione (o meglio non osservazioni) sperimentali
+
+\subsection{Quark}
+Il calcolo per la sezione d'urto per l'urto $e^+e^- \rightarrow \mu^+ \mu^-$ è
+\begin{gather}
+		\sigma (e^+ e^- \rightarrow q \bar q) = \frac{4 \pi}{3} \frac{\alpha^2}{s} 
+\end{gather}
+Considerando la sezione d'urto per il processo $e^+e^- \rightarrow q \bar q$ si ha
+\begin{gather}
+	\sigma (e^+ e^- \rightarrow q \bar q) = \frac{4 \pi}{3} \frac{\alpha^2}{s} z^2_q N_c 
+\end{gather}
+Allora si può considerare il rapporto tra le due sezioni d'urto $\R$ per verificare il modello sperimentalmente. Effettivamente si possono individuare scattering tra $e^+ e^-$ tali che soddisfano il rapporto cercato, tuttavia non si riescono a distinguere di quali quark siano composti i $q \bar q$. Proprio per questa difficolta nella distinzione di $q \bar q$ il rapporto di farro è dato da 
+\begin{gather}
+	\R = \frac{\sum_q \sigma (e^+ e^- \rightarrow q \bar q)}{\sigma (e^+e^- \rightarrow \mu^+ \mu^-} = \left(\sum_q z_q^2 \right)\N_c
+\end{gather}
+Dove $\N_c$ sono i numeri di colore. Innanzitutto si osserva che visto che i quark non hanno tutti la stessa massa bisogna considerare solo quelli che rispettano la conservazione dell'energia ovvero quelli tali che
+\begin{gather}
+	\sqrt{s} \ge 2 m_q
+\end{gather}
+Per esempio 
+\begin{gather}
+	m_u \sim 1 MeV \rightarrow \text{sempre}\\
+	m_t \sim 175 GeV \rightarrow \sqrt{s} > 350 GeV \ \text{non ancora}\\
+	m_d = 2MeV \rightarrow \sqrt{s} > 4 MeV\\
+	m_c = 1.5 GeV \rightarrow \sqrt{s} > 3 GeV
+\end{gather}
+Secondo questo criterio il rapporto $\R$ sarà diverso aumentando l'energia dell'acceleratore, nel senso che il calcolo includerà più quark, effettivamente si vede (fuori dalle risonanze) che ci sono delle zone in cui si misurano rapporti diversi.
+
+\subsection{Regola di OZI}
+Si applica ai vettori mesoni in quando hanno parità $J^{\P \Cc}=1^{--}$ che è la stessa del fotone quindi anche creabile da urti elettrone-positrone. Questa regola definisce il motivo per cui alcune risonanze sono strette e larghe. tipicamente una risonanza è stretta se la massa della risonanza è minore del primo stato aperto vicerversa è larga.
+
+Considerando appunto lo stato del charmonio, se i due $c \bar c$ si annichiliscono in tre gluoni, perchè siccome $c \bar c$ è un singoletto di colore quindi decade in tre gluoni, si vede che la costante di accoppiamento per questo processo è $o (\alpha_s / \pi) $ che è molto piccola che si riflette come una risonanza stretta.
+
+Invece se c'è abbastanza energia da produrre un charme aperto si manifesta una risonanza larga, quindi i due $c$ e $\bar c$ si legano per formare in $D^0$ e $\bar D^0$ con una coppia di quark e antiquark che sono generati in prossimità di $c \bar c$. in questo caso vale che 
+\begin{gather}
+	\sqrt{s} \sim 2 m (Q) + E_{BIND}
+\end{gather}
+La coppia di quark è generato da gluoni emessi dai $c \bar c$. I gluoni sono costituiti da una carica di colore una di anticolore. Nel caso dello stato legato del charmonio $c \bar c$ quindi non c'è energia sufficiente per avere lo stato aperto, risulta che per la coniugazione di carica \textbf{devono} essere prodotti 3 gluoni come anticipato sopra. 
+
+\subsubsection{Esempio}
+Se si cionsidernao i decadimenti del $\phi$ esso può decadere o in tre pioni (energeticamente e cinematicamente favorito $Q\approx 600MeV$) o in due kaoni (sfavorito $Q \approx 20 MeV$), nonostante ciò la probabilità maggiore ricade sui due kaoni per la regola di ozi ovvero la carica di colore fa si che si favorisca la configruazione aperta.
+
+\section{Adronizzazione e jet}
+\subsection{Adronizzazione}
+
+
+\subsection{Jet}
+Si dividono due fasi di energia, 
+\begin{enumerate}
+	\item  fino a una certa energia si usa la QCD pertubativi e si descrive la cascata di gluoni e quark 
+	\item poi non si può usare la lagrangiana della QCD ma is usano modelli ad hoc calibrati con dei parametri sulla base empiriche dell'esperimento, di questi alcuni sono instabili e altri sono stabili e attraversano il rivelatore
+\end{enumerate}
+Ci sono due scale per l'energia, quella dell'adronizzazione è all'incirca fissa (0-1GeV) e contribuisce alla dispersione trasversale, l'energia a disposizione invece viene da quella disponibile dall'accelleratore. Più è alta l'energia della collisione, maggiore è l'energia che possono prendere lungo la direzione di volo e quindi più stretto sarà il fascio prodotto. Questi si chiamano getti o jet. Dal jet si risale al quark (ignoto) che l'ha generato. 
+\subsubsection{Prova diretta che i quark hanno spin 1/2}
+Dalla sezione d'urto, calcolata considerando il contributo di spin si trova che:
+\begin{gather}
+	\boxed{(1+ \cos^2 \theta) \Sigma + 2 \cos \theta \Delta }
+\end{gather}
+E siccome $\Delta$ dai dati sperimentali è $\neq 0$ allora risulta che i quark hanno spin 1/2
+
+\subsubsection{Prova sperimentale dell'esistenza die gluoni e spin}
+Siccome si possono manifestare più jet in seguito allo scontro tra elettrone positrone risulta che alcuni jet sono prodotti direttamente da quark, altri quark invece deviano, prima di emterre il loro jetm emettendo un gluone che a sua volta produce un jet. Il fatto che se ne contano 3 e non 2 è la prova che devono esistere gluoni. Misurando gli angoli tra i vari jet è possibile risalire al valore di spin del gluone che è 1
+
+\section{Partoni}
+il modello statico di un adrone sarebbe un agglomerato di tre quark o di un quark e antiquark. in realtà questo modello è ingenuo e approssimativo. in realtà i quark all'interno di un adrone si muove a velocità prossime a quella della luce, i costituenti sono sia reali che virtuali e scambiano energia attraverso gluoni (la costante di accoppiamento è grande). I cosstituenti in dettaglio sono 
+\begin{itemize}
+	\item quark di valenza
+	\item gluoni
+	\item quark del mare (virtuali)
+\end{itemize}
+Tutti i costituenti vengono chiamati partoni. Il parton shower è collegato a una difficolta tecnica perchè in qcd non si riescono a fare conti precisi e fedeli di un proscesso, nell'evlluzione di uno sciame adronico la costante è talmente grande che non si riesce a calcolare come pertubazione. Quindi le interazioni dei quark che producono particelle osservabili tramite jet si dividono in due categorie, quelle descrivibili con la qcd pertubativa che prendono il nome di parton shower e una parte non calcolabile con questi metodi che viene chiamata frammentazione.
+
+
+\chapter{Oscillazioni di sapore}
+Ricapitolando avevamo visto le simmetrie
+\begin{enumerate}
+	\item continue (gruppo Poincarè, invarianza Gauge) per le quali si applica il teorema di Noether
+	\item quelle sperimentali tipo il numero barionico
+	\item "accidentali" come la stranezza, isospin
+	\item discrete, che sono legate a scelte arbitrare del sdr, come la scelta del sistema levogiro piuttosto che destrogiro (parità) oppure la scelta di definizione di particella o antiparticella (coniugazione di carica).
+\end{enumerate}
+
+\section{Violazioni di parità del kaone}
+È noto che il kaone positivo decade come $k^+ \rightarrow \pi^0 \pi^+$ e anche $k^+ \rightarrow \pi^0 \pi^0 \pi^+$, essendo tutti stati con $J^\P=0^-$ si ha che lo stato finale ha $J=0$ per conservazione del momento $J$, ma parità $\P_{\pi^+} \P_{\pi^0} (-1)^L=+1$ in caso e $-1$ nell'altro quindi c'è una violazione della parità.
+
+
+\section{Violazione di parità del decadimento del Co}
+Il decadimento è il seguente
+\begin{gather}
+	_{27}^{60}Co \rightarrow _{28}^{60}Ni^{**} + e^- \bar \nu_e
+\end{gather}
+I nuclei $^{60}Co$, che possiedono un momento magnetico nucleare permanente $\mu$, sono stati allineati in un forte campo magnetico B e gli elettroni di decadimento $\beta$ sono stati rilevati a diversi angoli polari rispetto a questo asse. Poiché sia B che $\mu$ sono vettori assiali, non cambiano segno sotto la parità. Quindi l'unica quantità che cambia segno è la quantità di moto dell'elettrone emesso. Quindi, se la parità fosse conservata nell'interazione debole, il rate degli elettroni emessi in una certa direzione rispetto al campo B sarebbe identico a quello nella direzione opposta. Sperimentalmente, è stato osservato che più elettroni sono stati emessi nella direzione opposta a quella del campo magnetico.
+
+I valori sono $J(Co)=5$ e $J(Ni^{**})=4$, $J(e^-)=J(\bar \nu_e)=1/2$. 
+
+Schematicamente
+\begin{gather}
+	\ket{J_{Co}}= \ket{5,5} \ \ \ \ \ket{J_{Ni**}}=\ket{4,4}
+\end{gather}
+Allora la parte mancante per conservare $J$ è assegnata a elettrone e anti neutrino che per sopperire all'unità mancante di momento angolare saranno allineati concordi al Nichel. 
+
+Chiamando $\theta$ l'angolo della direzione del moto delle particelle, $e^-$ e antineutrino, rispetto alla direzione del momento angolare J e utilizzando come asse di quantizzazione la direzione di volo si ha che possono esistere correnti di tipo R e L. Quella di tipo R avrà elicità nella direzione del moto invece l'antineutrino che va dalla parte opposta avrà elicità opposta al moto (quindi concorde a quella dell'elettrone perchè è antiparticella quindi la freccia va al contrario). Per la corrente left l'elicità è opposta al verso di moto dell'elettrone per entrambe le particelle. Per questo processo si ha che la larghezza di decadimento è
+
+\begin{gather}
+	\Gamma (\theta) = \Gamma_R(\theta) + \Gamma_L (\theta)\\
+	\A \propto g_R 	\bra{1,1} e^{-iJ_y \theta} \ket{1,1} \propto g_R d_{11}^1= g_R \frac{1+ \cos \theta}{2}\\
+	\A \propto g_L \bra{1,1} e^{-iJ_y \theta} \ket{1,1} \propto g_L d_{1-1}^1 = g_R \frac{1+\cos \theta}{2}\\
+	\Rightarrow 	\boxed{\Gamma  }
+\end{gather}
+
+Allora se la parità è conservata è che $g_L = \pm g_R$
+
+Introducendo il parametro di asimetria up down
+\begin{gather}
+	A_{ud} = \frac{\N (\theta=0) - \N(\theta=\pi)}{\N(0)+\N(\pi)}\\
+	\Gamma (0) = \frac{1}{2} (g_L^2 + g_R^2) + \frac{g_R^2-g_L^2}{2}\\
+	\Gamma (\pi) = \frac{1}{2} (g_L^2+g_R^2)- \frac{g_R^2-g_L^2}{2}\\
+	\Rightarrow A_{ud} = \frac{g_R^2-g_L^2}{g_R^2+g_L^2}
+\end{gather}
+I valori del parametro di asimetria sono
+\begin{gather}
+	\text{tutto R}: g_R=1, \ g_L =0 \Rightarrow A_{ud}=1 \ \text{parità massimamenete violata}\\
+	\text{tutto L}: g_R=0, \ g_L =1 \Rightarrow A_{ud}=1 \ \text{parità massimamenete violata}\\
+	\text{simmetria} \ g_R^2 =g_L^2 \ \ A_{ud}
+\end{gather}
+
+
+
+esperimento wu e correnti debole neutre 
+
+
+\section{Invarianza per coniugazione di carica}
+Applicando l'operatore coniugazione di carica l'elettrone diventa positrone quindi cambierebbe la definizione del significato della carica delle particelle e con essa il verso della corrente, cambiando ciò cambia anche il verso del campo magnetico e si verifica che gli elettroni continuano a muoversi in direzione opposta a B. Allora non solo l'esperimento di Wu consente sia di distinguere in maniera assoluta destra e sinistra sia una definizione di carica
+
+
+\section{Violazione $\Cc \P$}
+Applicando gli operatori CP di solito succede che il sistema rimane invariato
+\subsection{Oscillazioni di sapore}
+Studiando i decadimenti tipici per il $K^0$ (Flavour tagging) si trova che
+\begin{gather}
+	k^0 \rightarrow \pi^- \ell^+ \nu_\ell\\
+	\bar k^0 \rightarrow \pi^+ \ell^- \bar \nu_\ell
+\end{gather}
+Dai risultati dei decadimenti è possibile distinguere la particella iniziale. Non sempre è così perchè esistono dei decadimenti che si dicono \textit{flavour blind} che sono comuni a entrambe le particelle
+\begin{gather}
+	k^0 \rightarrow \pi^{+/0} \pi^{-/0} \leftarrow \bar k^0\\
+	k^0 \rightarrow 3 \pi \leftarrow \bar k^0
+\end{gather}
+Che riguardano circa il 50\% dei casi. Oltre al decadimento può succedere un processo di ricombinazione, cioè che un $k^0$ produce una coppia virtuale $\pi^+$ e $\pi^-$ e queste invece che allontanarsi si ricombinano producendo un $\bar k^0$, in linea di principio questa differenza è rilevabile perchè hanno stranezza diversa, $|\Delta \S| = |\S_f - \S_i| =2$. Questo può avvenire perchè la stranezza non è un numero preciso, è conservata dalle forze forti, quasi sempre da quelle em e violata per quelle deboli. Invece il numero barionico che è una simmetria esatta impedisce l'osservazione di altri processi come $n \rightarrow \bar n$.
+
+Introducendo un formalismo di un sistema a due livelli si può rappresentare lo stato in esame come
+\begin{gather}
+	\vettore{k^0 \\ \bar k^0} \rightarrow H = \begin{matrix}
+		H_{11} & H_{12} \\ H_{21} & H_{22}
+	\end{matrix}
+\end{gather}
+Il teorema CPT implica che i due termini diagonali siano uguali (per simmetria di fatto) $H_{12}=H_{21}$, e questi termini sono quelli legati alla transizione da particella a antiparticella e viceversa. Adesso se la simmetria di CP è verificata allora non sarebbe in grado distinguere le due particelle in particolare
+\begin{gather}
+	\P (k^0 \rightarrow \bar k^0) = \P ( \bar k^0 \rightarrow k^0)
+\end{gather}
+Diagonalizzando l'hamiltoniano si possono trovare due autostati che convenzionalmente sono chiamati \textit{k corto} e \textit{k lungo} tali che 
+\begin{gather}
+	\vettore{k_s \\ k_l} \rightarrow \begin{matrix}
+		H_s & 0 \\ 0 & H_l
+	\end{matrix}
+\end{gather}
+Segue che 
+\begin{gather}
+	\ket{k_s} = p \ket{k_0} + q \ket{\bar k^0}\\
+	\ket{k_l} = p \ket{k^0} - q \ket{\bar k^0}
+\end{gather}
+Agli hamiltoniani si associa la scrittura
+\begin{gather}
+	H_{l/s} =  m_{l/s} - i \frac{\Gamma}{2}
+\end{gather}
+Se gli stati sono equiprobabili si ha che $p=q= \frac{1}{\sqrt{2}}$, questo vale se sono anche autostati ci CP, convenzionalmente $CP \ket{k^0} =  \ket{\bar k^0}$ e $CP \ket{ \bar k^0} = \ket{k^0}$, ed è facile vedere che
+\begin{gather}
+	CP \ket{k_s} = \ket{k_s}\\
+	CP \ket{k_l} = - \ket{k_l}
+\end{gather}
+Considerando il $k \rightarrow \pi^0 \pi^0$ si ha che lo stato finale ha parità +1 e coniugazione di carica +1. Perciò avremo che 
+\begin{gather}
+	CP ( \pi^0 \pi^0) = +1
+\end{gather}
+Per tre pioni invece CP-=-1 (verificarlo). In generale comunque 2 pioni $\rightarrow$ CP=1 e 3 pioni $\rightarrow$ CP=-1. Dunque il $k_s$ decade in due pioni invece $k_l$ in tre. Andando a vedere il Q valore si ha che 
+\begin{gather}
+	Q_s (k_s\rightarrow 2\pi ) = m_k - 2m_\pi = 500 -280 \approx 220 MeV\\
+	Q_l = (k_l \rightarrow 3 \pi ) = m_k - 3 m_\pi = 500 - 420 \approx 80 MeV 
+\end{gather}
+Nel decadimento a tre corpi l'energia cinetica a disposizione è minore quindi ci si aspetta che la larghezza di tale processo sia minore dell'altro processo 
+\begin{gather}
+	\Gamma_l < \Gamma_s \Rightarrow \tau_l > \tau_s
+\end{gather}
+In particolare si può dire che $k^0$ e $\bar k^0$ sono autostati di produzioni e $k_l$ e $k_s$ autostati di evoluzione. Se a $t=0$ si produce uno stato 
+\begin{gather}
+	\ket{\psi(0)}=\ket{k^0}	= \frac{1}{\sqrt{2}} ( \ket{k_l} + \ket{s})\\
+	\Rightarrow \ket{\psi(t)} = e^{iHt} \ket{\psi(0)}=\\
+	=\frac{1}{\sqrt{2}} (e^{(-im_s - \Gamma /2)t} \ket{k_s} + e^{(-im_s - \Gamma /2)t} \ket{k_l})\\
+	\ket{\psi(t)}= \frac{1}{\sqrt{2}}e^{-im_st} (e^{-\Gamma t} \ket{k_s} + e^{i(m_s-m_l)t} e^{-\Gamma_l t}\ket{k_l})\\
+	\ket{\psi(t)}= \frac{1}{\sqrt{2}}e^{-im_st} (e^{-\Gamma t} \ket{k_s} + e^{i\Delta mt} e^{-\Gamma_l t}\ket{k_l})
+\end{gather}
+Quindi l'evoluzione è regolata da tre parametri. La funzione d'onda può essere utilizzata per ricavare quattro ampiezza:
+\begin{enumerate}
+	\item $A_0$ è l'ampiezza di probabilità di ritrovare la particella a un tempo t l'autostato iniziale $\ket{k^0}$
+	\begin{gather}
+		A_0= \braket{k^0}{\psi(t)}\\
+			A_0 = \bra{k^0} \frac{1}{\sqrt{2}}\left( e^{-im_st} (e^{-\Gamma t} \ket{k_s} + e^{i\Delta mt} e^{-\Gamma_l t}\ket{k_l} \right)\\
+			\frac{1}{2} e^{-im_st} ( \bra{k_s}+ \bra{k_l}) ( e^{- \Gamma_s/2 t} \ket{k_s} + e^{i\Delta mt}e^{i \Gamma_l/2 t } \ket{k_s} )\\
+			= \frac{1}{2} e^{im_st} ( e^{-i \Gamma_s/2t} + e^{i \Delta m t} e^{-i \Gamma_l /2 t})\\
+			\boxed{P_0=|A_0|^2 = \frac{1}{4} ( e^{-\Gamma_st} e^{-i\Gamma_l t} + 2 e^{-(\Gamma_s + \Gamma_l)/2t} \cos \Delta m t)}
+	\end{gather}
+	\item $\bar A_0 = \braket{\bar k^0}{\psi(t)}$
+	
+	\item $\bar A_s = \braket{k_s}{\psi(t)}$
+	\begin{gather}
+	A_s = 	\bra{k_s}\frac{1}{\sqrt{2}} \left( e^{-im_st} (e^{-\Gamma t} \ket{k_s} + e^{i\Delta mt} e^{-\Gamma_l t}\ket{k_l} \right)\\
+	=e^{-im_st} e^{-\Gamma_s t/2}\\
+	\boxed{P_s= |A_s|^2 =\frac{1}{2} e^{-\Gamma_st}}
+	\end{gather}
+
+	\item $\bar A_l = \braket{k_l}{\psi(t)}$
+	\begin{gather}
+		A_l = \bra{k_l}\frac{1}{\sqrt{2}} \left( e^{-im_st} (e^{-\Gamma t} \ket{k_s} + e^{i\Delta mt} e^{-\Gamma_l t}\ket{k_l} \right)\\
+		=e^{-im_lt} e^{-\Gamma_l t/2}\\
+		\boxed{P_l=|A_l|^2 =\frac{1}{2} e^{-\Gamma_lt}}
+	\end{gather}
+\end{enumerate}
+Sperimentalmente si può verificare $P_s$ come
+\begin{gather}
+	P_s = \frac{\N (\pi \pi)}{\N (k_0)}= \frac{1}{2} e^{-\Gamma_st}
+\end{gather}
+Quindi in funzione del tempo mi aspetto un andamento esponenziale dal quale si può estrarre la vita media
+\begin{gather}
+	\tau_s = 8.954 \pm 0.004 \cdot 10^{-11}s
+\end{gather}
+Analogamente si può trovare la vita media del $k_l$ ed è $\tau_l = 5.12 \cdot 10^{-8}s$. Di fatto $k^0$ e $\bar k^0$ sono combinazione lineare degli stati lungo e corto, inoltre graficando le due probabilità in funzione del tempo si stabilizzano a 1/4 dopo circa 1ns perchè lo stato corto vive meno e sopravvive solo quello lungo.
+
+\subsubsection{Come avviene la violazione CP}
+\begin{enumerate}
+	\item o la violazione è intrinseca nella funzione d'onda cioè
+	\begin{gather}
+		\ket{k_s} = p \ket{k^0} + q \ket{\bar k^0} \Rightarrow p \neq q
+	\end{gather}
+	\item o nel decadimento cioè i prodotti di decadimento non rispettano la conservazione CP
+\end{enumerate}
+Sperimentalmente si può creare un fascio di k lunghi e si verifica se decadono $2 \pi$. In pratica si mettono due detector per misurare due pioni, si fa la massa invariante e si vede se cinematicamente potrebbe mancare un terzo pione, e si verifica che la massa invariante è compatibile con la massa del k lungo. 
+
+
+
+
+
+
+
+
+ 
+ \end{document}
